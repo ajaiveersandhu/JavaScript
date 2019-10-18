@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Show letter grade</title>
+	<script>
+		let num_input = 1;
+		while (num_input != 999) {
+			num_input = parseInt(prompt("Give me a number, from 0 to 100 or enter 999 to exit : "));
+			if ((num_input > 87) && (num_input < 100)) {
+				alert("Letter Grade : A");
+			} else if ((num_input > 79) && (num_input < 88)) {
+				alert("Letter Grade : B");
+			} else if ((num_input > 67) && (num_input < 80)) {
+				alert("Letter Grade : C");
+			} else if ((num_input > 59) && (num_input < 68)) {
+				alert("Letter Grade : D");
+			} else if (num_input < 61) {
+				alert("Letter Grade : F");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<main>
+		<h1>This page is displayed after the JavaScript is executed</h1>
+	</main>
+</body></html>

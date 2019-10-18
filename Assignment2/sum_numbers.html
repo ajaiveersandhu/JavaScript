@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Sum of Numbers</title>
+    <script>
+		let user_input = parseFloat(prompt("Enter any number to get the sum till that number : \n 'Range 1 to 100' "));
+		let total_sum = 0;
+		let user_choice = "y";
+		while(user_choice == "y" || user_choice == "Y") {
+			for(let x = 0; x <= user_input; x++) {
+				total_sum += x;
+			}
+			alert(`The sum of numbers from 1 to ${user_input} is ${total_sum}.`);
+			user_choice = prompt("Would you like to do another sum ? \nHit 'Y' to say YES.");
+			if ((user_choice == "y") || (user_choice == "Y")) {
+				user_input = parseFloat(prompt("Enter any number to get the sum till that number : \n 'Range 1 to 100' "));
+				total_sum = 0;
+			}
+		}
+    </script>
+</head>
+<body>
+    <main>
+        <!-- Will show after JavaScript has run -->
+        <h1>Thanks for using the Sum of Numbers application!</h1>
+    </main>
+</body>
+</html>
