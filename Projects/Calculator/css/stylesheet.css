@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(to left, #00AAFF, #FFFFFF);
+}
+
+header h1 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+main {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	min-height: 80vh;
+	grid-template-columns: repeat(5, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+	
+}
+
+main > button {
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid rgba(0, 0, 0, .75);
+	outline: none;
+	color: white;
+}
+
+main > button:hover {
+	background-color: black;
+}
+
+.twice_Size {
+	grid-column: span 2;
+	text-align: left;
+	padding-left: 40px;
+}
+
+.basic_Symbols {
+	background-color: black;
+}
+
+.symbols {
+	background-color: #00AAFF;
+}
+
+.numbers {
+	background-color: rgba(0, 0, 0, .85);
+}
+
+#output {
+	grid-column: 1 / 6;
+	background-color: black;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	color: white;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+#output #previous_Output {
+	color: rgba(255, 255, 255, 0.70);
+	font-size: 1.5rem;
+}
+
+#output #current_Output {
+	color: white;
+	font-size: 2.5rem;
+}
+
+
+
+
+
