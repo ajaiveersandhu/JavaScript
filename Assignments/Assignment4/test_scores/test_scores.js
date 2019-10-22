@@ -14,6 +14,9 @@ function addScore() {
 		names.push(name_input);
 		scores.push(score_input);
 	}
+
+	get_Id("display_results").onclick = displayResults;
+	get_Id("display_scores").onclick = displayScores;
 }
 
 function displayResults() {
