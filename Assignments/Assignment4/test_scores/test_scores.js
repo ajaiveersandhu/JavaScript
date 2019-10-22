@@ -15,8 +15,8 @@ function addScore() {
 		scores.push(score_input);
 	}
 
-	get_Id("display_results").onclick = displayResults;
-	get_Id("display_scores").onclick = displayScores;
+	displayResults();
+	displayScores();
 }
 
 function displayResults() {
