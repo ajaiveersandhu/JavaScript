@@ -71,9 +71,9 @@ var resetStopwatch = function (evt) {
 	// prevent default action of link
 	evt.preventDefault();
 	clearTimeout(tickTimer);
-	document.querySelector("#s_ms").innerHTML = 00;
-	document.querySelector("#s_seconds").innerHTML = 00;
-	document.querySelector("#s_minutes").innerHTML = 00;
+	document.querySelector("#s_ms").innerHTML = "000";
+	document.querySelector("#s_seconds").innerHTML = "00";
+	document.querySelector("#s_minutes").innerHTML = "00";
 	// stop timer
 
 	// reset elapsed variables and clear stopwatch display
