@@ -67,4 +67,5 @@ window.onload = function () {
 	get_Id("add").onclick = addScore;
 	get_Id("display_results").onclick = displayResults;
 	get_Id("display_scores").onclick = displayScores;
+        get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
 };
