@@ -6,6 +6,7 @@ function get_Id(id) {
 }
 
 function addScore() {
+        get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
 	let name_input = get_Id("name").value;
 	let score_input = parseFloat(get_Id("score").value);
 	if (names.includes(name_input)) {
@@ -17,6 +18,7 @@ function addScore() {
 
 	displayResults();
 	displayScores();
+        get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
 }
 
 function displayResults() {
