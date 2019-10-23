@@ -10,14 +10,14 @@ function addScore() {
 	let name_input = get_Id("name").value;
 	let score_input = parseFloat(get_Id("score").value);
 	if (names.includes(name_input)) {
-		//get_Id("name").insertAdjacentHTML("afterend", `<p style="display: inline; font-size: 0.75rem; margin: 0 1rem; color:blue;"> We already have the entry by same name : ${name_input}</p>`);
+		get_Id("name").insertAdjacentHTML("afterend", `<p style="display: inline; font-size: 0.75rem; margin: 0 1rem; color:blue;"> We already have the entry by same name : ${name_input}</p>`);
 	} else {
 		names.push(name_input);
 		scores.push(score_input);
 	}
 
-	//displayResults();
-	//displayScores();
+	displayResults();
+	displayScores();
         //get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
 }
 
