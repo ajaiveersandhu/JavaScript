@@ -16,9 +16,9 @@ function addScore() {
 		scores.push(score_input);
 	}
 
-	displayResults();
-	displayScores();
-        get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
+	//displayResults();
+	//displayScores();
+        //get_Id("name").insertAdjacentHTML("afterend", `<p></p>`);
 }
 
 function displayResults() {
