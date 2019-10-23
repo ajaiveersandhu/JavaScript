@@ -53,30 +53,22 @@ function tickStopWatch() {
 var startStopwatch = function (evt) {
 	evt.preventDefault();
 	tickTimer = setInterval(tickStopWatch, 10);
-	// do first tick of stop watch and then set interval timer to tick 
-	// stop watch every 10 milliseconds. Store timer object in stopwatchTimer 
-	// variable so next two functions can stop timer.
-
 };
 
 var stopStopwatch = function (evt) {
-	// prevent default action of link
 	evt.preventDefault();
 	clearTimeout(tickTimer);
-	// stop timer
-
 };
 
 var resetStopwatch = function (evt) {
-	// prevent default action of link
 	evt.preventDefault();
 	clearTimeout(tickTimer);
 	document.querySelector("#s_ms").innerHTML = "000";
 	document.querySelector("#s_seconds").innerHTML = "00";
 	document.querySelector("#s_minutes").innerHTML = "00";
-	// stop timer
-
-	// reset elapsed variables and clear stopwatch display
+	tick = 0;
+	tickSeconds = 0;
+	tickMinutes = 0;
 
 };
 
