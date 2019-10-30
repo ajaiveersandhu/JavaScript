@@ -30,6 +30,7 @@ header h1 {
 }
 
 #autoplay img {
+    cursor: pointer;
     width: 72px;
     position: absolute;
     bottom: 10px;
