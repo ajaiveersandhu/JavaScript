@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     let $thumbnailClick = $(".thumbnails").find("a");
-    let $displayImage = $(".imageView").find("img");
+    let $displayImage = $(".imageView").find("#displayImage");
     let pauseAtEachImage = 500;
     let selectImage = 0;
     let inteval;
