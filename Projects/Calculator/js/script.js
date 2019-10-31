@@ -22,7 +22,7 @@ class Calculator {
     }
 
     delete() {
-        this.currentOutput = this.currentOutput.toString().slice(0, -1)
+        this.currentOutput = this.currentOutput.toString().slice(0, -1);
     }
 
     appendNumber(number) {
@@ -56,7 +56,8 @@ class Calculator {
         let compute;
         const previous = parseFloat(this.previousOutput);
         const current = parseFloat(this.currentOutput);
-        if (isNaN(previous) && isNaN(current)) return;
+        if (isNaN(current)) return;
+        if (isNaN(previous)) return;
         switch (this.operation) {
             case "+":
                 compute = previous + current;
@@ -71,25 +72,25 @@ class Calculator {
                 compute = previous / current;
                 break;
             case '√':
-                compute = Math.sqrt(current).toFixed(8);
+                compute = Math.sqrt(current);
                 break;
             case 'Sin':
-                compute = Math.sin(current).toFixed(8);
+                compute = Math.sin(current);
                 break;
             case 'Cos':
-                compute = Math.cos(current).toFixed(8);
+                compute = Math.cos(current);
                 break;
             case 'Tan':
-                compute = Math.tan(current).toFixed(8);
+                compute = Math.tan(current);
                 break;
             case 'exp':
-                compute = Math.exp(current).toFixed(8);
+                compute = Math.exp(current);
                 break;
             case 'log':
-                compute = Math.log(current).toFixed(8);
+                compute = Math.log(current);
                 break;
             case '%':
-                compute = ((previous / 100) * current).toFixed(8);
+                compute = (previous / 100) * current;
                 break;
             default:
                 return;
@@ -134,6 +135,7 @@ class Calculator {
             return;
         }
         if (this.operation === ")") {
+            if (this.previousOutput === "") return;
             this.currentOutputText.innerText = `${this.valueHolder} ${this.currentOutput} )`;
             this.currentOutput = this.valueHolder.split("(")[1].split(")")[0];
             this.operation = this.valueHolder.split("(")[0];
@@ -142,9 +144,11 @@ class Calculator {
         }
         if (this.operation === "%") {
             this.currentOutputText.innerText = `${this.previousOutput} % ${this.currentOutput}`;
+            return;
         }
         if (this.operation === "√") {
             this.currentOutputText.innerText = `${this.operation} ${this.currentOutput}`;
+            return;
         }
         if (this.operation != null) {
             this.previousOutputText.innerText = `${this.previousOutput} ${this.operation}`;
