@@ -7,7 +7,9 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: linear-gradient(to left, #00AAFF, #FFFFFF);
+	/* background: linear-gradient(to left, #00AAFF, #FFFFFF); */
+	background: rgb(238, 174, 202);
+	background: radial-gradient(circle, rgba(238, 174, 202, 0.6) 5%, rgba(0, 170, 255, 0.6) 97%);
 }
 
 header h1 {
@@ -22,6 +24,7 @@ main {
 	min-height: 80vh;
 	grid-template-columns: repeat(5, 95px);
 	grid-template-rows: minmax(100px, auto) repeat(6, 90px);
+
 }
 
 main>button {
@@ -44,7 +47,8 @@ main>button:hover {
 
 .basicSymbols,
 .btnDEL,
-.btnEquals {
+.btnEquals,
+.btnAC {
 	background-color: black;
 }
 
@@ -56,10 +60,15 @@ main>button:hover {
 	background-color: rgba(0, 0, 0, .85);
 }
 
+.basicSymbols {
+	font-size: 2.5rem;
+}
+
 .basicSymbols:hover,
 .btnDEL:hover,
 .numbers:hover,
-.btnEquals:hover {
+.btnEquals:hover,
+.btnAC:hover {
 	background-color: black;
 	border-bottom: 3px solid #00AAFF;
 }
@@ -75,6 +84,7 @@ main>button:hover {
 	color: white;
 	word-wrap: break-word;
 	word-break: break-all;
+	min-height: 17vh;
 }
 
 #output #previousOutput {

@@ -1,7 +1,17 @@
+const number = document.querySelectorAll(".numbers");
+const operation = document.querySelectorAll(".basicSymbols, .symbols, pi");
+const btnEquals = document.querySelector(".btnEquals");
+const btnDEL = document.querySelector(".btnDEL");
+const btnAC = document.querySelector(".btnAC");
+const previousOutputText = document.querySelector("#previousOutput");
+const currentOutputText = document.querySelector("#currentOutput");
+const pi = Math.PI.toFixed(8);
+
 class Calculator {
     constructor(previousOutput, currentOutput) {
         this.previousOutputText = previousOutputText;
         this.currentOutputText = currentOutputText;
+        this.valueHolder;
         this.screenClear();
     }
 
@@ -12,7 +22,7 @@ class Calculator {
     }
 
     delete() {
-        this.currentOperand = this.currentOperand.toString().slice(0, -1)
+        this.currentOutput = this.currentOutput.toString().slice(0, -1)
     }
 
     appendNumber(number) {
@@ -22,12 +32,24 @@ class Calculator {
 
     selectOperation(operation) {
         if (operation === "") return;
+        if (operation === "π" && this.currentOutput !== '') {
+            this.previousOutput = this.currentOutput;
+            this.currentOutput = (pi * parseFloat(this.currentOutput)).toFixed(8);
+            this.operation = undefined;
+            return;
+        }
+        if (operation === "π" && this.previousOutput === '') {
+            this.currentOutput = pi;
+            this.operation = undefined;
+            return;
+        }
         if (this.previousOutput !== '') {
             this.calculate();
         }
         this.operation = operation;
         this.previousOutput = this.currentOutput;
         this.currentOutput = "";
+
     }
 
     calculate() {
@@ -48,33 +70,89 @@ class Calculator {
             case '÷':
                 compute = previous / current;
                 break;
+            case '√':
+                compute = Math.sqrt(current).toFixed(8);
+                break;
+            case 'Sin':
+                compute = Math.sin(current).toFixed(8);
+                break;
+            case 'Cos':
+                compute = Math.cos(current).toFixed(8);
+                break;
+            case 'Tan':
+                compute = Math.tan(current).toFixed(8);
+                break;
+            case 'exp':
+                compute = Math.exp(current).toFixed(8);
+                break;
+            case 'log':
+                compute = Math.log(current).toFixed(8);
+                break;
+            case '%':
+                compute = ((previous / 100) * current).toFixed(8);
+                break;
             default:
                 return;
         }
         this.currentOutput = compute;
         this.operation = undefined;
-        this.previousOutput = '';
+        this.previousOutput = "";
+
     }
 
     updateDisplay() {
         this.currentOutputText.innerText = this.currentOutput;
         this.previousOutputText.innerText = this.previousOutput;
+        if (this.operation === "Sin") {
+            this.currentOutputText.innerText = `Sin( ${this.currentOutput}`;
+            this.valueHolder = `Sin( ${this.currentOutput}`;
+            this.previousOutputText.innerText = "";
+            return;
+        }
+        if (this.operation === "Cos") {
+            this.currentOutputText.innerText = `Cos( ${this.currentOutput}`;
+            this.valueHolder = `Cos( ${this.currentOutput}`;
+            this.previousOutputText.innerText = "";
+            return;
+        }
+        if (this.operation === "Tan") {
+            this.currentOutputText.innerText = `Tan( ${this.currentOutput}`;
+            this.valueHolder = `Tan( ${this.currentOutput}`;
+            this.previousOutputText.innerText = "";
+            return;
+        }
+        if (this.operation === "e") {
+            this.currentOutputText.innerText = `exp( ${this.currentOutput}`;
+            this.valueHolder = `exp( ${this.currentOutput}`;
+            this.previousOutputText.innerText = "";
+            return;
+        }
+        if (this.operation === "log") {
+            this.currentOutputText.innerText = `log( ${this.currentOutput}`;
+            this.valueHolder = `log( ${this.currentOutput}`;
+            this.previousOutputText.innerText = "";
+            return;
+        }
+        if (this.operation === ")") {
+            this.currentOutputText.innerText = `${this.valueHolder} ${this.currentOutput} )`;
+            this.currentOutput = this.valueHolder.split("(")[1].split(")")[0];
+            this.operation = this.valueHolder.split("(")[0];
+            this.previousOutputText.innerText = `${this.operation}`;
+            return;
+        }
+        if (this.operation === "%") {
+            this.currentOutputText.innerText = `${this.previousOutput} % ${this.currentOutput}`;
+        }
+        if (this.operation === "√") {
+            this.currentOutputText.innerText = `${this.operation} ${this.currentOutput}`;
+        }
         if (this.operation != null) {
-            this.previousOutputText.innerText =
-                `${this.previousOutput} ${this.operation}`;
+            this.previousOutputText.innerText = `${this.previousOutput} ${this.operation}`;
         } else {
             this.previousOutputText.innerText = "";
         }
     }
 }
-
-const number = document.querySelectorAll(".numbers");
-const operation = document.querySelectorAll(".basicSymbols");
-const btnEquals = document.querySelector(".btnEquals");
-const btnDEL = document.querySelector(".btnDEL");
-const btnAC = document.querySelector(".btnAC");
-const previousOutputText = document.querySelector("#previousOutput");
-const currentOutputText = document.querySelector("#currentOutput");
 
 // long press DEL button, just like in android calculator app
 // let delay;
@@ -101,12 +179,12 @@ btnAC.addEventListener("click", () => {
     calculator.updateDisplay();
 });
 
-btnDEL.addEventListener("click", function () {
+btnDEL.addEventListener("click", () => {
     calculator.delete();
     calculator.updateDisplay();
 })
 
-btnEquals.addEventListener("click", function () {
+btnEquals.addEventListener("click", () => {
     calculator.calculate();
     calculator.updateDisplay();
 });
