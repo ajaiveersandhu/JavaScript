@@ -20,30 +20,31 @@ main {
 	justify-content: center;
 	align-content: center;
 	min-height: 80vh;
-	grid-template-columns: repeat(5, 100px);
-	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-	
+	grid-template-columns: repeat(5, 95px);
+	grid-template-rows: minmax(100px, auto) repeat(6, 90px);
 }
 
-main > button {
+main>button {
 	cursor: pointer;
 	font-size: 2rem;
-	border: 1px solid rgba(0, 0, 0, .75);
+	border: 0px solid rgba(0, 0, 0, .75);
 	outline: none;
 	color: white;
+	transition: border 500ms;
 }
 
-main > button:hover {
+main>button:hover {
 	background-color: black;
 }
 
-.twice_Size {
+.twiceSize {
 	grid-column: span 2;
-	text-align: left;
-	padding-left: 40px;
+	text-align: center;
 }
 
-.basic_Symbols {
+.basicSymbols,
+.btnDEL,
+.btnEquals {
 	background-color: black;
 }
 
@@ -55,6 +56,14 @@ main > button:hover {
 	background-color: rgba(0, 0, 0, .85);
 }
 
+.basicSymbols:hover,
+.btnDEL:hover,
+.numbers:hover,
+.btnEquals:hover {
+	background-color: black;
+	border-bottom: 3px solid #00AAFF;
+}
+
 #output {
 	grid-column: 1 / 6;
 	background-color: black;
@@ -62,23 +71,18 @@ main > button:hover {
 	align-items: flex-end;
 	justify-content: space-around;
 	flex-direction: column;
-	padding: 10px;
+	padding: 15px;
 	color: white;
 	word-wrap: break-word;
 	word-break: break-all;
 }
 
-#output #previous_Output {
+#output #previousOutput {
 	color: rgba(255, 255, 255, 0.70);
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
-#output #current_Output {
+#output #currentOutput {
 	color: white;
-	font-size: 2.5rem;
+	font-size: 3rem;
 }
-
-
-
-
-
