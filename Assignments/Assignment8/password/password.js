@@ -13,7 +13,7 @@ $(document).ready(function () {
         var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-+!@";
         var user_input = $("#num").val();
         var generated_password;
-        if(!isNaN(user_input)) {
+        if(!isNaN(user_input) && user_input != "") {
             generated_password = chars.charAt(getRandomNumber(parseInt(Math.random()*100))).toString();
             for(let x = 1; x < user_input; x++) {
                 generated_password = generated_password.concat(chars.charAt(getRandomNumber(parseInt(Math.random()*100))));
@@ -21,7 +21,6 @@ $(document).ready(function () {
         } else {
             alert("Please enter a valid number.");
         }
-        console.log(generated_password);
         $("#password").val(generated_password); // clear previous entry
 
     }); // end click()
