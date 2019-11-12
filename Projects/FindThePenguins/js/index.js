@@ -41,8 +41,7 @@ function playGame() {
     yetiPosition = parseInt(Math.random() * 14 + 1);
     document.getElementById(`penguin${yetiPosition}`).id = "yeti";
     console.log(`yeti position : ${yetiPosition}`);
-    let x = 1;
-    while(x < 16) {
+    for (let x = 1; x <= 15; x++) {
         let moundClicked = document.querySelector(`.mound:nth-of-type(${x})`);
         if (x === yetiPosition) {
             moundClicked.addEventListener("click", () => {
@@ -63,9 +62,9 @@ function playGame() {
                     moundClicked.id = `penguin${yetiPosition}`;
                 }
                 console.log(`${moundClicked.id}Audio`);
-                document.getElementById(`${moundClicked.id}Audio`).play();
                 displayImage(moundClicked.id);
                 if (!moundClicked.classList.contains("clicked")) {
+                    document.getElementById(`${moundClicked.id}Audio`).play();
                     score++;
                     updateScore.innerText = score;
                     moundClicked.classList.add("clicked");
@@ -77,7 +76,6 @@ function playGame() {
                 }
             });
         }
-        x++;
     }
 }
 
