@@ -1,7 +1,7 @@
 // I not writing any f**king comment, because I don't want to read this code in my future. Good Luck to you. 
 let yetiPosition;
 let score;
-let highestScore;
+let highestScore = 0;
 let game;
 let imgFileName;
 let updateScore;
@@ -11,11 +11,12 @@ let imageURL;
 window.addEventListener("load", () => {
     yetiPosition = 0;
     score = 0;
-    highestScore = 0;
-    localStorage.setItem("highestScore", highestScore);
+    if (!localStorage.getItem("highestScore")) {
+        localStorage.setItem("highestScore", highestScore);
+    }
     updateScore = document.getElementById("score");
     scoreMessage = document.getElementById("scoreMessage");
-    document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
+    document.getElementById("highestScore").innerText = localStorage.getItem("highestScore");
     game = document.getElementById("game");
     
     playGame();
@@ -31,8 +32,6 @@ function playGame() {
         if (x === yetiPosition) {
             moundClicked.addEventListener("click", () => {
                 moundClicked.id = "yeti";
-                console.log(`in if : ${moundClicked.id}, ${x}`);
-                console.log(`yeti position in if: ${yetiPosition}`);
                 document.getElementById(`yetiAudio`).play();
                 displayImage(moundClicked.id);
                  setTimeout(() => {
@@ -69,10 +68,13 @@ function displayImage(imgFileName) {
 }
 
 function endGame(winORLoss, score) {
-    if (sessionStorage.getItem("highestScore") < score) {
+    if (localStorage.getItem("highestScore") < score) {
         highestScore = score;
-        sessionStorage.setItem("highestScore", highestScore);
-        document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
+        console.log("highest score ");
+        localStorage.setItem("highestScore", highestScore);
+        document.getElementById("highestScore").innerText = localStorage.getItem("highestScore");
+    } else {
+        highestScore = localStorage.getItem("highestScore");
     }
     if (winORLoss) {
         scoreMessage.children[0].innerText = `Congratulations !!! You WON !`;
