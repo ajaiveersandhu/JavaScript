@@ -46,20 +46,25 @@ body {
 }
 
 #scoreMessage {
-    width: 80%;
-    height: 150px;
-    margin: auto;
+    width: 90%;
+    height: 60vh;
     display: none;
     text-align: center;
     font-family: Comic Sans MS;
     font-weight: 800;
     color: darkslategrey;
+    background-color: #8dc5c5c8;
     text-shadow: 2px 2px lightgrey;
+    position: absolute;
+    top: 20vh;
+    left: 5%;
+    z-index: 1;
+    transition: 1s ease-out;
 }
 
 #scoreMessage h2 {
     font-size: 3rem;
-    margin: 1rem auto 1rem auto;
+    margin: 5rem auto 1rem auto;
 }
 #scoreMessage h3 {
     font-size: 2.5rem;
@@ -68,7 +73,7 @@ body {
 #scoreMessage .replayIcon {
     display: block;
     cursor: pointer;
-    margin: 1rem auto;
+    margin: 3rem auto;
     height: 100px;
     width: 100px;
     background: url("../images/replayButton.svg") no-repeat;
@@ -91,7 +96,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_1.png');
+    background-image:url('../images/mound1.png');
 }
 #penguin2:hover {
     background-image:url('../images/mound_2_hover.png');
@@ -104,7 +109,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_2.png');
+    background-image:url('../images/mound2.png');
 }
 #penguin3:hover {
     background-image:url('../images/mound_3_hover.png');
@@ -117,7 +122,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_3.png');
+    background-image:url('../images/mound3.png');
 }
 #penguin4:hover {
     background-image:url('../images/mound_4_hover.png');
@@ -130,7 +135,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_4.png');
+    background-image:url('../images/mound4.png');
 }
 #penguin5:hover {
     background-image:url('../images/mound_5_hover.png');
@@ -143,7 +148,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_5.png');
+    background-image:url('../images/mound5.png');
 }
 #penguin6:hover {
     background-image:url('../images/mound_6_hover.png');
@@ -156,7 +161,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_6.png');
+    background-image:url('../images/mound6.png');
 }
 #penguin7:hover {
     background-image:url('../images/mound_7_hover.png');
@@ -169,7 +174,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_7.png');
+    background-image:url('../images/mound7.png');
 }
 #penguin8:hover {
     background-image:url('../images/mound_8_hover.png');
@@ -182,7 +187,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_8.png');
+    background-image:url('../images/mound8.png');
 }
 #penguin9:hover {
     background-image: url('../images/mound_9_hover.png');
@@ -197,7 +202,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_9.png');
+    background-image: url('../images/mound9.png');
 }
 
 #penguin10:hover {
@@ -213,7 +218,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_10.png');
+    background-image: url('../images/mound10.png');
 }
 
 #penguin11:hover {
@@ -229,7 +234,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_11.png');
+    background-image: url('../images/mound11.png');
 }
 #penguin12:hover {
     background-image: url('../images/mound_12_hover.png');
@@ -244,7 +249,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_12.png');
+    background-image: url('../images/mound12.png');
 }
 #penguin13:hover {
     background-image: url('../images/mound_13_hover.png');
@@ -259,7 +264,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_13.png');
+    background-image: url('../images/mound13.png');
 }
 #penguin14:hover {
     background-image: url('../images/mound_14_hover.png');
@@ -273,7 +278,7 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image: url('../images/mound_14.png');
+    background-image: url('../images/mound14.png');
 }
 
 #yeti:hover {
@@ -287,5 +292,5 @@ body {
     width: 200px;
     height: 200px;
     float: left;
-    background-image:url('../images/mound_9.png');
+    background-image:url('../images/mound9.png');
 }
