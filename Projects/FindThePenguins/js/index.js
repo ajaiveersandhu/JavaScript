@@ -31,7 +31,7 @@ function resetGame() {
         if (x === 15) {
             moundClicked.id = `yeti`;
         }
-        imageURL = `url("/images/mound${x}.png")`;
+        imageURL = `url("images/mound${x}.png")`;
         document.querySelector(`#${moundClicked.id}`).style.backgroundImage = imageURL;
     }
     playGame();
@@ -80,7 +80,7 @@ function playGame() {
 }
 
 function displayImage(imgFileName) {
-    imageURL = `url("/images/${imgFileName}.png")`;
+    imageURL = `url("images/${imgFileName}.png")`;
     document.querySelector(`#${imgFileName}`).style.backgroundImage = imageURL;
 }
 
