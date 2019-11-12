@@ -4,16 +4,21 @@ let score = 0;
 let highestScore = 0;
 let game;
 let imgFileName;
+let updateScore;
+let scoreMessage;
 
 window.addEventListener("load", () => {
     sessionStorage.setItem("highestScore", highestScore);
+    scoreMessage = document.getElementById("scoreMessage");
+    document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
     game = document.getElementById("game");
+    updateScore = document.getElementById("score");
     playGame();
 });
 
 function playGame() {
     let replacedID;
-    yetiPosition = parseInt(Math.random() * 15 + 1);
+    yetiPosition = parseInt(Math.random() * 14 + 1);
     replacedID = yetiPosition;
     document.getElementById(`penguin${yetiPosition}`).id = "yeti";
     console.log(`yeti position : ${yetiPosition}`);
@@ -32,9 +37,12 @@ function playGame() {
                 } else {
                     moundClicked.id = `penguin${yetiPosition}`;
                 }
-                console.log(`in else : ${moundClicked.id}`);
                 displayImage(moundClicked.id);
-                score++;
+                if (!moundClicked.classList.contains("clicked")) {
+                    score++;
+                    updateScore.innerText = score;
+                    moundClicked.classList.add("clicked");
+                }
                 if (score === 14) {
                     endGame(1, score);
                 }
@@ -49,13 +57,19 @@ function displayImage(imgFileName) {
 }
 
 function endGame(winORLoss, score) {
-    let scoreMessage = document.getElementById("scoreMessage");
+    if (sessionStorage.getItem("highestScore") < score) {
+        highestScore = score;
+        sessionStorage.setItem("highestScore", highestScore);
+        document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
+    }
     if (winORLoss) {
         scoreMessage.children[0].innerText = `Congratulations !!! You WON !`;
-        scoreMessage.children[1].innerText = `Score : ${score}`;
+        scoreMessage.children[1].innerText = `Your Score : ${score}`;
+        scoreMessage.children[2].innerText = `Highest Score : ${highestScore}`;
     } else {
         scoreMessage.children[0].innerText = `Better LUCK NEXT TIME`;
-        scoreMessage.children[1].innerText = `Score : ${score}`;
+        scoreMessage.children[1].innerText = `Your Score : ${score}`;
+        scoreMessage.children[2].innerText = `Highest Score : ${highestScore}`;
     }
     scoreMessage.style.display = "block";
     scoreMessage.addEventListener("click", resetGame);
@@ -63,5 +77,5 @@ function endGame(winORLoss, score) {
 }
 
 function resetGame() {
-    
+    scoreMessage.style.display = "none";
 }

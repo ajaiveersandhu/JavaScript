@@ -65,9 +65,17 @@ body {
     font-size: 2.5rem;
     margin: 1rem auto 1rem auto;
 }
-#scoreMessage span {
+#scoreMessage .replayIcon {
+    display: block;
+    cursor: pointer;
+    margin: 1rem auto;
+    height: 100px;
+    width: 100px;
+    background: url("../images/replayButton.svg") no-repeat;
+    background-size: 80px;
     cursor: pointer;
 }
+
 #game {
     margin-top: 2rem;
 }
