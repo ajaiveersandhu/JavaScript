@@ -9,33 +9,18 @@ let scoreMessage;
 let imageURL;
 
 window.addEventListener("load", () => {
-    localStorage.setItem("highestScore", highestScore);
-    resetGame();
-});
-
-function resetGame() {
-    scoreMessage = document.getElementById("scoreMessage");
-    document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
-    game = document.getElementById("game");
-    updateScore = document.getElementById("score");
-    scoreMessage.style.display = "none";
     yetiPosition = 0;
     score = 0;
     highestScore = 0;
-    for (let x = 1; x < 16; x++) {
-        let moundClicked = document.querySelector(`.mound:nth-of-type(${x})`);
-        if (moundClicked.classList.contains("clicked")) {
-            moundClicked.classList.remove("clicked");
-        }
-        moundClicked.id = `penguin${x}`;
-        if (x === 15) {
-            moundClicked.id = `yeti`;
-        }
-        imageURL = `url("images/mound${x}.png")`;
-        document.querySelector(`#${moundClicked.id}`).style.backgroundImage = imageURL;
-    }
+    localStorage.setItem("highestScore", highestScore);
+    updateScore = document.getElementById("score");
+    scoreMessage = document.getElementById("scoreMessage");
+    document.getElementById("highestScore").innerText = sessionStorage.getItem("highestScore");
+    game = document.getElementById("game");
+    
     playGame();
-}
+});
+
 
 function playGame() {
     yetiPosition = parseInt(Math.random() * 14 + 1);
@@ -61,7 +46,6 @@ function playGame() {
                 } else {
                     moundClicked.id = `penguin${yetiPosition}`;
                 }
-                console.log(`${moundClicked.id}Audio`);
                 displayImage(moundClicked.id);
                 if (!moundClicked.classList.contains("clicked")) {
                     document.getElementById(`${moundClicked.id}Audio`).play();
@@ -100,6 +84,8 @@ function endGame(winORLoss, score) {
         scoreMessage.children[2].innerText = `Highest Score : ${highestScore}`;
     }
     scoreMessage.style.display = "block";
-    document.querySelector(".replayIcon").addEventListener("click", resetGame);
+    document.querySelector(".replayIcon").addEventListener("click", () => {
+        window.location.reload(true);
+    });
 
 }
