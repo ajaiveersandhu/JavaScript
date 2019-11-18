@@ -34,9 +34,8 @@ function playGame() {
                 moundClicked.id = "yeti";
                 document.getElementById(`yetiAudio`).play();
                 displayImage(moundClicked.id);
-                 setTimeout(() => {
-                     endGame(0, score);
-                 }, 500);
+                endGame(0, score);
+                return;
             });
         } else {
             moundClicked.addEventListener("click", () => {
