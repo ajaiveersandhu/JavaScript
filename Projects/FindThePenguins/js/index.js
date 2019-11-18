@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 function playGame() {
     yetiPosition = parseInt(Math.random() * 14 + 1);
     document.getElementById(`penguin${yetiPosition}`).id = "yeti";
-    console.log(`yeti position : ${yetiPosition}`);
+    // console.log(`yeti position : ${yetiPosition}`);
     for (let x = 1; x <= 15; x++) {
         let moundClicked = document.querySelector(`.mound:nth-of-type(${x})`);
         if (x === yetiPosition) {
@@ -89,5 +89,4 @@ function endGame(winORLoss, score) {
     document.querySelector(".replayIcon").addEventListener("click", () => {
         window.location.reload(true);
     });
-
 }
