@@ -1,8 +1,23 @@
 // Listen for Submit
-document.getElementById("loan-form").addEventListener("submit", calculateResults);
+document.getElementById("loan-form").addEventListener("submit", event => {
+	// Show the loader for User Experience
+	document.getElementById("loading").style.display = "block";
+	setTimeout(calculateResults, 2000);
+	event.preventDefault();
+});
+
+document.getElementById("amount").addEventListener("focus", () => {
+	// Hide the results
+	document.getElementById("results").style.display = "none";
+	// Hiding the loader again
+	document.getElementById("loading").style.display = "none";
+	// document.getElementById("amount").value = "";
+	// document.getElementById("interest").value = "";
+	// document.getElementById("years").value = "";
+});
 
 // Calculate Results
-function calculateResults(event) {
+function calculateResults() {
 	// UI variables
 	const amount = document.getElementById("amount");
 	const interest = document.getElementById("interest");
@@ -20,18 +35,25 @@ function calculateResults(event) {
 	const monthly = (principal * x * calculatedInterest) / (x - 1);
 
 	if (isFinite(monthly)) {
+		// Display the results
+		document.getElementById("results").style.display = "block";
+		// Hiding the loader again
+		document.getElementById("loading").style.display = "none";
+
 		monthlyPayment.value = monthly.toFixed(2);
 		totalPayment.value = (monthly * calculatedPayment).toFixed(2);
 		totalInterest.value = ((monthly * calculatedPayment) - principal).toFixed(2);
 	} else {
 		showError("Please check your numbers.");
 	}
-
-	event.preventDefault();
 }
 
 // showError
 function showError(error) {
+	// Hide the results
+	document.getElementById("results").style.display = "none";
+	// Hiding the loader again
+	document.getElementById("loading").style.display = "none";
 	// Create a Div
 	const errorDiv = document.createElement("div");
 
