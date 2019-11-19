@@ -58,7 +58,11 @@ function getTasks() {
 // Add task
 function addTask(event) {
     if (taskInput.value === "") {
-        alert("Add a task");
+        M.toast({
+            html: `Write some task, first !!!`,
+            classes: "rounded",
+            displayLength: 750
+        });
     } else {
         // Create li element
         const li = document.createElement("li");
@@ -127,7 +131,6 @@ function clearTasks() {
     while (taskList.firstChild) {
         taskList.removeChild(taskList.firstChild);
     }
-
     // Clear tasks from local storage
     clearTasksFromLocalStorage();
 }
