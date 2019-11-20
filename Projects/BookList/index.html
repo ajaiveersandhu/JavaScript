@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+	<title>Book List</title>
+	<style>
+		hr {
+			display: none;
+		}
+
+		#bookTable {
+			display: none;
+		}
+		.message {
+			color: white;
+			margin: 0.5rem 0 1rem 0 !important;
+			font-size: 2rem;
+			border-radius: 10px !important;
+			padding: 0 25% !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Book List</h2>
+		<form id="bookForm">
+			<label for="bookTitle">Book Title</label>
+			<input class="u-full-width" type="text" id="bookTitle" placeholder="Book Title">
+			<label for="bookAuthor">Author</label>
+			<input class="u-full-width" type="text" id="bookAuthor" placeholder="Book Author">
+			<label for="bookISBN">ISBN</label>
+			<input class="u-full-width" type="text" id="bookISBN" placeholder="ISBN">
+			<input type="submit" value="Submit" id="submit">
+		</form>
+
+		<hr>
+
+		<div id="bookTable">
+			<table class="u-full-width">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Author</th>
+						<th>ISBN</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="bookEntry"></tbody>
+			</table>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>
