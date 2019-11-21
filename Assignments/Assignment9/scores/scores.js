@@ -22,8 +22,9 @@ class Student {
         document.getElementById("first_name").focus();
     }
 
-    static clearTxtArea(txtAreaScores) {
+    static clearTxtArea(txtAreaScores, averageScore) {
         txtAreaScores.value = "";
+        averageScore.value = "";
         studentArray = [];
     }
 }
@@ -59,13 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("sort_button").addEventListener("click", () => {
-    txtAreaScores = document.getElementById("scores");
+    const txtAreaScores = document.getElementById("scores");
     sortByLastNameAndDisplay(txtAreaScores);
 });
 
 document.getElementById("clear_button").addEventListener("click", () => {
-    txtAreaScores = document.getElementById("scores");
-    Student.clearTxtArea(txtAreaScores);
+    const txtAreaScores = document.getElementById("scores"),
+          averageScore = document.getElementById("average_score");
+    Student.clearTxtArea(txtAreaScores, averageScore);
 });
 
 function pushToArray(firstName, lastName, score) {
