@@ -24,7 +24,7 @@ class UI {
 		document.querySelector("tbody").append(tableRow);
 
 		// display success Message
-		this.constructor.displayMessage("Book has been succesfully added.", "teal");
+		UI.displayMessage("Book has been succesfully added.", "teal");
 	}
 
 	clearFields() {
@@ -38,6 +38,9 @@ class UI {
 		const message = document.createElement("div");
 		// Adding ClassName
 		message.className = "message";
+		message.classList.add("ten");
+		message.classList.add("columns");
+		message.classList.add("u-pull-right");
 		message.appendChild(document.createTextNode(msg));
 		message.style.backgroundColor = color;
 		// Inserting message before form
@@ -57,33 +60,33 @@ class UI {
 }
 
 // Event Listeners
+document.addEventListener("DOMContentLoaded", () => {
+	document.querySelector("#bookTitle").focus();
+});
 document.getElementById("bookForm").addEventListener("submit", event => {
 
 	// fetching all the form values
 	const bookTitle = document.querySelector("#bookTitle"),
 		bookAuthor = document.querySelector("#bookAuthor"),
 		bookISBN = document.querySelector("#bookISBN");
-	
-	// Instantiating Book object
-	const book = new Book(bookTitle.value, bookAuthor.value, bookISBN.value);
 
-	// Instantiate UI object : to add book to table
-	const ui = new UI();
-
-	if (book.bookTitle === "" || book.bookAuthor === "" || book.bookISBN === "") {
+	if (bookTitle.value === "" || bookAuthor.value === "" || bookISBN.value === "") {
 		// display Error Message
 		UI.displayMessage("Please enter complete book details", "tomato");
 
 	} else {
+		// Instantiating Book object
+		const book = new Book(bookTitle.value, bookAuthor.value, bookISBN.value);
+
+		// Instantiate UI object : to add book to table
+		const ui = new UI();
 		ui.addBookToList(book);
+		// UI clear fields
+		ui.clearFields();
+		bookTitle.focus();
 	}
-	
-	// UI clear fields
-	ui.clearFields();
 
 	event.preventDefault();
-
-	bookTitle.focus();
 });
 
 document.getElementById("bookEntry").addEventListener("click", event => {
