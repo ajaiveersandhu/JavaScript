@@ -7,10 +7,17 @@
     <script>
         $(document).ready(function() {
             // display date from session storage
-            $("#email").text( sessionStorage.email );
-            $("#phone").text( sessionStorage.phone );
-            $("#zip").text( sessionStorage.zip );
-            $("#dob").text( sessionStorage.dob );
+            // $("#email").text( sessionStorage.email );
+            // $("#phone").text( sessionStorage.phone );
+            // $("#zip").text( sessionStorage.zip );
+            // $("#dob").text( sessionStorage.dob );
+
+            // fetch data from associative array fed data to session storage variable
+            let profileDate = sessionStorage.getItem("profile").split("|");
+            $("#email").text(profileDate[0].split("=")[1]);
+            $("#phone").text(profileDate[1].split("=")[1]);
+            $("#zip").text(profileDate[2].split("=")[1]);
+            $("#dob").text(profileDate[3].split("=")[1]);
             
             $("#back").click(function() {
                 history.back();
