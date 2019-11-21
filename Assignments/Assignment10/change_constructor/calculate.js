@@ -6,25 +6,27 @@ $(document).ready(function() {
         // get the number of cents from the user
         cents = Math.floor( parseInt( $("#cents").val() ) );
         let bingo = new Coins(cents);
-        bingo.isValid();
-        quarters = bingo.getNumber(25);
-        dimes = bingo.getNumber(10);
-        nickels = bingo.getNumber(5);
-        pennies = bingo.getNumber(1)
         
-        
-        // display the results of the calculations
-        $("#quarters").val( quarters );
-        $("#dimes").val( dimes );
-        $("#nickels").val( nickels );
-        $("#pennies").val( pennies );
+        if (isNaN(cents) || cents < 0 || cents > 99) {
+            bingo.isValid();
+            
+        } else { 
+            quarters = bingo.getNumber(25);
+            dimes = bingo.getNumber(10);
+            nickels = bingo.getNumber(5);
+            pennies = bingo.getNumber(1)
 
-        // select cents text box for next entry
-        $("#cents").select();
 
-//        if (isNaN(cents) || cents < 0 || cents > 99) {
-//            alert("Please enter a valid number between 0 and 99");
-//        } else {     
+            // display the results of the calculations
+            $("#quarters").val( quarters );
+            $("#dimes").val( dimes );
+            $("#nickels").val( nickels );
+            $("#pennies").val( pennies );
+
+            // select cents text box for next entry
+            $("#cents").select();
+        }
+
 //            // calculate the number of quarters
 //            quarters = cents / 25;      // get number of quarters
 //            quarters = Math.floor(quarters);

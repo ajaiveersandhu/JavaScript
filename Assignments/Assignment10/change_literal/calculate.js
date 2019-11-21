@@ -5,26 +5,33 @@ $(document).ready(function() {
     
         // get the number of cents from the user
         cents = Math.floor( parseInt( $("#cents").val() ) );
-        Coins.cents = cents;
-        Coins.isValid();
-        quarters = Coins.getNumber(25);
-        dimes = Coins.getNumber(10);
-        nickels = Coins.getNumber(5);
-        pennies = Coins.getNumber(1)
         
         
-        // display the results of the calculations
-        $("#quarters").val( quarters );
-        $("#dimes").val( dimes );
-        $("#nickels").val( nickels );
-        $("#pennies").val( pennies );
+        
+        
+        // display the results of the calculation
 
         // select cents text box for next entry
-        $("#cents").select();
+        
 
-//        if (isNaN(cents) || cents < 0 || cents > 99) {
+        if (isNaN(cents) || cents < 0 || cents > 99) {
+            
+            Coins.isValid();
 //            alert("Please enter a valid number between 0 and 99");
-//        } else {     
+        } else {     
+            Coins.cents = cents;
+            quarters = Coins.getNumber(25);
+            dimes = Coins.getNumber(10);
+            nickels = Coins.getNumber(5);
+            pennies = Coins.getNumber(1);
+            
+            $("#quarters").val( quarters );
+            $("#dimes").val( dimes );
+            $("#nickels").val( nickels );
+            $("#pennies").val( pennies );
+            
+            $("#cents").select();
+        }
 //            // calculate the number of quarters
 //            quarters = cents / 25;      // get number of quarters
 //            quarters = Math.floor(quarters);

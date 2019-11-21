@@ -6,12 +6,7 @@ class Coins {
     }
     
     isValid() {
-        if(isNaN(parseInt(this.cents))) {
-            alert("Cents entry must be NUMERIC.");
-            if(this.cents < 0 || this.cents > 99) {
-                alert("Valid range is 0 to 99.");
-            }
-        }
+        alert("Please enter a valid number between 0 and 99");
     }
     
     getNumber(divisor) {
