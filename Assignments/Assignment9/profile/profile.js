@@ -58,7 +58,7 @@ $(document).ready(function(){
             $( "#phone" ).next().text(
                 "Please enter a phone number in NNN-NNN-NNNN format.");
         }
-        if ( associativeArray["zip"] === "" || !associativeArray["zip"].match(/^\d{3}(-\d{3})?$/) ) {
+        if ( associativeArray["zip"] === "" || !associativeArray["zip"].match(/^\d{5}(-\d{4})?$/) ) {
             isValid = false;
             $( "#zip" ).next().text("Please enter a valid zip code.");
         }
