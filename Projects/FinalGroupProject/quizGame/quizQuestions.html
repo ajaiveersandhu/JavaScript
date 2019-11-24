@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:500,900&display=swap" rel="stylesheet">
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<!-- <link rel="stylesheet" href="css/stylesheet.css"> -->
+
+		<link rel="stylesheet" href="../css/quizQuestions.css">
+
+		<title>Final Group Project</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="col s12 quizCard z-depth-4">
+				<div class="row valign-wrapper header">
+					<div class="col s1 avatar">
+						<img src="../imgs/avatar.svg" alt="" class="circle avatarIcon">
+					</div>
+
+					<div class="col s4 left-align">
+						<span class="userFullName flow-text">Full Name</span>
+					</div>
+
+					<div class="col s4 offset-s3 valign-wrapper timeRemaining right-align">
+						<span class="flow-text">Time Remaining : <span class="minsLefts">10</span> Mins</span>
+						<span class="timeMinsBar"></span>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="row questionTimeBar">
+					<div class="col s3 attemptedQuestions">
+						<h5 class="sameColorText">5 <span class="outOfQuestions">/10 Questions</span></h5>
+					</div>
+					
+					<div class="col s4 push-s5 questionTime">
+						<h5 class="questionTimeSeconds">TIME REMAINING </h5>
+						<span class="timeLeftInSeconds"></span>
+					</div>
+					
+				</div>
+
+				<div class="row questionCard">
+					<div class="col s10 offset-s1">
+						<span class="flow-text question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed molestias sunt!</span>
+					</div>
+				</div>
+
+				<div class="row options">
+					<div class="col s5 questionChoices">
+						 <p class="option">
+						 	<label>
+						 		<input name="group1" type="radio" />
+						 		<span>Lorem, ipsum dolor.</span>
+						 	</label>
+						 </p>
+					</div>
+					<div class="col s5 questionChoices">
+						<p class="option">
+							<label>
+								<input name="group1" type="radio" />
+								<span>Lorem, ipsum dolor.</span>
+							</label>
+						</p>
+					</div>
+					<div class="col s5 questionChoices">
+						<p class="option">
+						 	<label>
+						 		<input name="group1" type="radio" />
+						 		<span>Lorem, ipsum dolor.</span>
+						 	</label>
+						 </p>
+					</div>
+					<div class="col s5 questionChoices">
+						<p class="option">
+						 	<label>
+						 		<input name="group1" type="radio" />
+						 		<span>Lorem, ipsum dolor.</span>
+						 	</label>
+						 </p>
+					</div>
+				</div>
+
+				<div class="row buttons">
+					<div class="row col s2 offset-s1">
+						<a href="#!" class="btn waves-effect waves-light">End Quiz</a>
+					</div>
+
+					<div class="row col s2 offset-s6">
+						<a href="#!" class="btn waves-effect waves-light">Next Question</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+
+</html>

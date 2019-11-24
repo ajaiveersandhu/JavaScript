@@ -1,26 +1,26 @@
 :root {
 	font-family: 'Roboto', sans-serif;
-	--backgronud-color : #f8f8f8;
+	--backgronud-color: #f8f8f8;
 	--font-color: #8D8A86;
 	--main-bright: #4B23F4;
 }
 
 body {
 	background-color: var(--backgronud-color);
+	min-width: 750px;
 }
 
-.col {
-	padding: 0 !important;
-}
-
-.quizHeading {
-	margin-top: 15vh;
-	font-size: 4rem;
-	font-weight: 900;
+.signUpCard {
+	margin-top: 5vh;
 }
 
 .fade {
 	color: var(--font-color);
+}
+
+.col .s4 {
+	width: 50px !important;
+	margin: 0 5px;
 }
 
 .textLine {
@@ -32,8 +32,9 @@ body {
 .inputBar {
 	border: 1px solid var(--font-color);
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 3px;
 	padding: 0 10px !important;
+	margin: 5px auto;
 }
 
 input {
@@ -42,24 +43,11 @@ input {
 	height: 2rem !important;
 }
 
-.buttons {
-	margin-top: 25px;
-}
-
-.buttons .btn {
+.btn {
 	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	border-radius: 7px;
-}
-
-.buttons .btn:nth-child(1) {
+	height: 45px;
+	line-height: 45px;
+	border-radius: 5px;
 	background-color: var(--main-bright);
-	margin-left: 0;
+	margin: 60px auto;
 }
-
-.buttons .btn:nth-child(2) {
-	background-color: var(--font-color);
-	margin-left: 30px;
-}
-

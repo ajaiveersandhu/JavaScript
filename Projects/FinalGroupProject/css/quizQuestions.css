@@ -1,0 +1,100 @@
+:root {
+	font-family: 'Roboto', sans-serif;
+	--backgronud-color: #171B34;
+	--background-card: #282C49;
+	--font-color: white;
+	--faded-color: #8D8A86;
+	--main-bright: #4B23F4;
+	--wrong-option: #D11D04;
+}
+
+body {
+	background-color: var(--backgronud-color);
+	min-width: 750px;
+}
+
+.quizCard {
+	background-color: var(--background-card);
+	margin: 10vh 1vw;
+	padding: 2%;
+}
+
+.avatar {
+	margin-left: 60px !important;
+}
+
+.avatarIcon {
+	background-color: #09C9D1;
+	height: 50px;
+	width: 50px;
+}
+
+.userFullName {
+	color: var(--font-color);
+	font-size: 1.8rem;
+}
+.outOfQuestions {
+	color: var(--faded-color);
+}
+
+.timeRemaining {
+	/* margin-right: -25px; */
+	/* margin-top: -15px; */
+	color: var(--font-color);
+}
+
+.timeRemaining .flow-text {
+	font-size: 1.8rem;
+}
+
+.questionTimeBar {
+	margin-top: 30px;
+}
+
+.attemptedQuestions {
+	margin-left: 50px !important;
+}
+
+.sameColorText {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.questionTimeSeconds {
+	font-size: 1.5rem;
+	color: var(--faded-color);
+}
+
+.questionCard {
+	margin-top: 40px;
+}
+
+.question {
+	color: var(--font-color);
+	font-size: 2rem;
+}
+
+.options {
+	margin: 20px auto 20px 100px !important;
+}
+
+.questionChoices {
+	border: 1px solid var(--faded-color);
+	margin: 12px 20px;
+	border-radius: 4px;
+}
+
+input[type="radio"]:checked {
+	border: 1px solid #04CAD1;
+}
+
+.btn {
+	width: 120px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 5px;
+	background-color: var(--main-bright);
+	margin: 40px auto 5px auto;
+}
+
+
