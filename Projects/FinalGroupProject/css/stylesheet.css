@@ -1,0 +1,65 @@
+:root {
+	font-family: 'Roboto', sans-serif;
+	--backgronud-color : #f8f8f8;
+	--font-color: #8D8A86;
+	--main-bright: #4B23F4;
+}
+
+body {
+	background-color: var(--backgronud-color);
+}
+
+.col {
+	padding: 0 !important;
+}
+
+.quizHeading {
+	margin-top: 15vh;
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+.fade {
+	color: var(--font-color);
+}
+
+.textLine {
+	font-size: 1.3rem;
+	margin-top: -15px;
+	margin-bottom: 60px;
+}
+
+.inputBar {
+	border: 1px solid var(--font-color);
+	background-color: white;
+	border-radius: 5px;
+	padding: 0 10px !important;
+}
+
+input {
+	border-bottom: 0px !important;
+	margin-bottom: 0 !important;
+	height: 2rem !important;
+}
+
+.buttons {
+	margin-top: 25px;
+}
+
+.buttons .btn {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 7px;
+}
+
+.buttons .btn:nth-child(1) {
+	background-color: var(--main-bright);
+	margin-left: 0;
+}
+
+.buttons .btn:nth-child(2) {
+	background-color: var(--font-color);
+	margin-left: 30px;
+}
+

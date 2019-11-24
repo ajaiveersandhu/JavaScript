@@ -2,11 +2,55 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500,900&display=swap" rel="stylesheet">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!-- <link rel="stylesheet" href="css/stylesheet.css"> -->
+
+	<link rel="stylesheet" href="css/stylesheet.css">
+
 	<title>Final Group Project</title>
 </head>
 <body>
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<div class="quizHeading col s10">
+					<h1><span class="fade">Quiz</span> Game</h1>
+				</div>
+			
+				<div class=" col s8">
+					<p class="fade textLine">Welcome back, please login to your account.</p>
+				</div>
+				
+				<div class="row inputBar col s8">
+					<!-- <i class="material-icons prefix">email</i> -->
+					<label for="userName" class="inputLable">USERNAME</label>
+					<input id="userName" type="text" class="validate inputIn">
+				</div>
+
+				<div class="row inputBar col s8">
+					<!-- <i class="material-icons prefix">lock</i> -->
+					<label for="password" class="inputLable">PASSWORD</label>
+					<input id="password" type="password" class="validate inputIn">
+				</div>
+
+				<div class="row buttons col s10">
+					<a href="#!" class="btn waves-effect">Login</a>
+					<a href="#!" class="btn waves-effect">Sign Up</a>
+				</div>
+			</div>
+			<div class="col l6 hide-on-med-and-down">
+				<img src="imgs/login-background.jpg" alt="" class="responsive-img">
+			</div>
+		</div>
+	</div>	
 	
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
