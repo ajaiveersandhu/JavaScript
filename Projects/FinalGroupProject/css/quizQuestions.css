@@ -75,7 +75,7 @@ body {
 }
 
 .options {
-	margin: 20px auto 20px 100px !important;
+	margin: 20px auto 20px 130px !important;
 }
 
 .questionChoices {
@@ -93,8 +93,17 @@ input[type="radio"]:checked {
 	height: 45px;
 	line-height: 45px;
 	border-radius: 5px;
-	background-color: var(--main-bright);
 	margin: 40px auto 5px auto;
+}
+
+.endQuiz {
+	margin-left: 30px !important;
+	background-color: var(--faded-color);
+}
+
+.nextQuestion {
+	margin-right: 20px !important;
+	background-color: var(--main-bright);
 }
 
 
