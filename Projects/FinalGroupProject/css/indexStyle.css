@@ -37,15 +37,15 @@ body {
 
 .input-box {
 	border: 1px solid var(--faded-text);
-	border-radius: 3px;
+	border-radius: 5px;
 	position: relative;
-	width: 85%;
+	width: 65%;
 	margin-bottom: 20px;
 	background-color: white;
 }
 
 .input-box label {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	position: absolute;
 	padding: 5px 10px 0px 10px;
 	transform-origin: top left;
@@ -55,12 +55,12 @@ body {
 }
 
 .input-box.active label {
-	transform: translate(0, 3px) scale(0.75);
+	transform: translate(0, 3px) scale(0.70);
 }
 
 .input-box input {
 	background-color: white;
-	width: 100%;
+	width: 90%;
 	border: none;
 	outline: 0;
 	font-size: 1.5rem;
@@ -73,32 +73,34 @@ body {
 }
 
 .btn-login {
-	text-decoration: none;
-	font-weight: 600;
 	font-size: 1.1rem;
-	display: inline-block;
-	width: 120px;
-	text-align: center;
-	padding: 15px 25px;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
 	border: 1px solid var(--main-purple);
 	border-radius: 7px;
 	background-color: var(--main-purple);
 	color: white;
 }
 
+.btn-login:hover {
+	background-color: var(--main-purple-hover);
+}
+
 .btn-sign-up {
-	text-decoration: none;
-	font-weight: 600;
 	font-size: 1.1rem;
-	display: inline-block;
-	width: 120px;
-	text-align: center;
-	padding: 15px 25px;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
 	border: 1px solid var(--faded-text);
 	border-radius: 7px;
 	background-color: #DEDEDE;
 	color: black;
 	margin-left: 50px;
+}
+
+.btn-sign-up:hover {
+	background-color: rgba(175, 174, 174, 0.917);
 }
 
 .right-panel img {
@@ -125,6 +127,11 @@ body {
 
 	.input-box {
 		width: 90%;
+		justify-self: center;
+	}
+
+	.btn-sign-up {
+		justify-self: end;
 	}
 
 	.heading {
@@ -133,16 +140,15 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
-
 	.btn-login {
 		display: block;
-		margin: 30px auto;
-		width: 60%;
+		margin: 30px 0px;
+		width: 90%;
 	}
 
 	.btn-sign-up {
 		display: block;
-		margin: 30px auto;
-		width: 60%;
+		margin: 30px 0px;
+		width: 90%;
 	}
 }
