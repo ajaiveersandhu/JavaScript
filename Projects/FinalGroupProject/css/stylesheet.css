@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "Futura", "Futura Md BT";
+	src: url("../fonts/futur.ttf");
+	src: url("../fonts/futura\ medium\ bt.ttf");
+}
+
+:root {
+	--background: #F8F8F8;
+	--text-color: #24221F;
+	--faded-text: #8D8A86;
+	--main-purple: #4B23F4;
+}
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	font-family: "Futura Md BT";
+	background-color: var(--background);
+	color: var(--text-color);
+}
