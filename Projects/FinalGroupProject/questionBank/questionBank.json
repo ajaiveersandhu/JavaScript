@@ -108,7 +108,7 @@
 	},
     {
         "id": 13,
-        "question": "What will be the output of the following JavaScript code? <p id = 'demo' > < /p>\nvar txt1 = 'good'\nvar txt2 = 'day'\ndocument.getElementById('demo').innerHTML = txt1 + txt2",
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo'></p>\nvar txt1 = 'good'\nvar txt2 = 'day'\ndocument.getElementById('demo').innerHTML = txt1 + txt2",
         "options": [
 			"good day",
 			"goodday",
@@ -119,7 +119,7 @@
 	},
     {
         "id": 14,
-        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo' > < /p>\n<script >\nvar x = 5\nvar y = 2\nvar z = x % y\ndocument.getElementById('demo').innerHTML = z </script>",
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo'></p>\n<script >\n    var x = 5\n    var y = 2\n    var z = x % y\n    document.getElementById('demo').innerHTML = z\n</script>",
         "options": [
 			"0",
 			"1",
@@ -130,7 +130,7 @@
 	},
     {
         "id": 15,
-        "question": "What will be the output of the following JavaScript code? \n<p id='demo'></p> \n<script>\nvar x = 10\nx *= 5\ndocument.getElementById('demo').innerHTML = x \n</script>",
+        "question": "What will be the output of the following JavaScript code?\n<p id='demo'></p>\n<script>\n    var x = 10\n    x *= 5\n    document.getElementById('demo').innerHTML = x \n</script>",
         "options": [
 			"5",
 			"10",
@@ -141,7 +141,7 @@
 	},
     {
         "id": 16,
-        "question": "What will be the output of the following JavaScript code?  \n<p id = 'demo' > < /p> \n<script >\ntxt1 = “one”\ntxt1 += “two”\ndocument.getElementById('demo').innerHTML = txt1 </script>",
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo' > < /p>\n<script >\n    txt1 = “one”\n    txt1 += “two”\n    document.getElementById('demo').innerHTML = txt1\n</script>",
         "options": [
 			" onetwo",
 			"one two",
@@ -188,8 +188,8 @@
         "id": 20,
         "question": "The pop() method of the array does which of the following task?",
         "options": [
-			" decrements the total length by 1",
-			" increments the total length by 1",
+			"decrements the total length by 1",
+			"increments the total length by 1",
 			"prints the first element but no effect on the length",
 			"updates the element"
 		],
@@ -223,7 +223,7 @@
         "id": 23,
         "question": "What will be the possible output of the following JavaScript code?\nvar a = [1, 2, 3, 4, 5]\na.slice(0, 3)",
         "options": [
-			" Returns [1,2,3]",
+			"Returns [1,2,3]",
 			"Returns [4,5]",
 			"Returns [1,2,3,4]",
 			"Returns [1,2,3,4,5]"
@@ -247,8 +247,8 @@
         "question": "The primary purpose of the array map() function is that it __________",
         "options": [
 			"maps the elements of another array into itself",
-			" passes each element of the array and returns the necessary mapped elements",
-			" passes each element of the array on which it is invoked to the function you specify, and returns an array containing the values returned by that function",
+			"passes each element of the array and returns the necessary mapped elements",
+			"passes each element of the array on which it is invoked to the function you specify, and returns an array containing the values returned by that function",
 			"pass the elements of the array into another array"
 		],
         "correctIndex": 2
@@ -260,7 +260,7 @@
 			"filter and fold",
 			"inject and fold",
 			"finger and fold",
-			" fold"
+			"fold"
 		],
         "correctIndex": 1
 	},
@@ -270,7 +270,7 @@
         "question": "The method or operator used to identify the array is __________",
         "options": [
 			"isarrayType()",
-			" ==",
+			"==",
 			"===",
 			"typeof"
 		],
@@ -301,7 +301,7 @@
 	},
     {
         "id": 30,
-        "question": "What will be the output of the following JavaScript code?\nint sum = 0\nvar arr = [10, 15, 20, 30]\narr.forEach(function myFunction(element) {\nsum = sum + element\n})\ndocument.writeln(sum)",
+        "question": "What will be the output of the following JavaScript code?\nint sum = 0\nvar arr = [10, 15, 20, 30]\narr.forEach(function myFunction(element) {\n    sum = sum + element\n})\ndocument.writeln(sum)",
         "options": [
 			"70",
 			"75",
@@ -313,7 +313,7 @@
 
     {
         "id": 31,
-        "question": "What will be the output of the following JavaScript code?\nvar values = ['One', 'Two', 'Three']\nvar ans = values.shift()\ndocument.writeln(ans)\n",
+        "question": "What will be the output of the following JavaScript code?\nvar values = ['One', 'Two', 'Three']\nvar ans = values.shift()\ndocument.writeln(ans)",
         "options": [
 			"one",
 			"two",
@@ -324,12 +324,7 @@
 	},
     {
         "id": 32,
-        "question": "What will be the output of the following JavaScript code?
-
-        var arr = [1, 2, 3]
-        var rev = arr.reverse()
-        document.writeln(rev)
-        ",
+        "question": "What will be the output of the following JavaScript code?\nvar arr = [1, 2, 3]\nvar rev = \narr.reverse()\ndocument.writeln(rev)",
         "options": [
 			"1, 2, 3",
 			"3, 2, 1",
@@ -352,13 +347,7 @@
 	},
     {
         "id": 34,
-        "question": "What will be the output of the following JavaScript code?
-
-        function printprops(o) {
-            for (var p in o)
-                console.log(p + ": " + o[p] + "\n")
-        }
-        ",
+        "question": "What will be the output of the following JavaScript code?\nfunction printprops(o) {\n    for (var p in o)\nconsole.log(p + ': ' + o[p] + '\n')}",
         "options": [
 			" Prints the contents of each property of o",
 			"Returns undefined",
@@ -508,9 +497,7 @@
 	},
     {
         "id": 47,
-        "question": "What will be the equivalent code of the following JavaScript code?
-        o.m(x, y)
-        ",
+        "question": "What will be the equivalent code of the following JavaScript code?\no.m(x, y)",
         "options": [
 			" o.m(x) && o.m(y)",
 			"o[“m”](x,y)",
@@ -522,15 +509,7 @@
 
     {
         "id": 48,
-        "question": " What will be the output of the following JavaScript code?
-
-        function info() {
-            int a = 1
-            int b = 2
-            return a * b
-        }
-        document.write(info())
-        ",
+        "question": " What will be the output of the following JavaScript code?\nfunction info() {\n    int a = 1\n    int b = 2\n    return a * b\n}\ndocument.write(info())\n",
         "options": [
 			"1",
 			"2",
@@ -541,12 +520,7 @@
 	},
     {
         "id": 49,
-        "question": "What will be the output of the following JavaScript code?
-
-        var arr = [7, 5, 9, 1]
-        var value = Math.max.apply(null, arr)
-        document.writeln(value)
-        ",
+        "question": "What will be the output of the following JavaScript code?\nvar arr = [7, 5, 9, 1]\nvar value = Math.max.apply(null, arr)\ndocument.writeln(value)",
         "options": [
 			"7",
 			"5",
@@ -558,11 +532,7 @@
 
     {
         "id": 50,
-        "question": "What will be the output of the following JavaScript code?
-
-        var pow = new Function("num1", "num2", "return Math.pow(num1,num2)")
-        document.writeln(pow(2, 3))
-        ",
+        "question": "What will be the output of the following JavaScript code?\nvar pow = new Function('num1', 'num2','return Math.pow(num1,num2)')\ndocument.writeln(pow(2, 3))",
         "options": [
 			"2",
 			"3",
@@ -585,13 +555,7 @@
 
     {
         "id": 52,
-        "question": "What will the following JavaScript code snippet work? If not, what will be the error?
-
-        function tail(o) {
-            for ( o.next o = o.next)
-            return o
-        }
-        ",
+        "question": "What will the following JavaScript code snippet work? If not, what will be the error?\nfunction tail(o) {\n    for ( o.next o = o.next)\n    return o\n}",
         "options": [
 			"No, this will throw an exception as only numerics can be used in a for loop",
 			"No, this will not iterate",
@@ -602,24 +566,12 @@
 	},
     {
         "id": 53,
-        "question": "What will be the equivalent code of the following JavaScript code?
-
-        for (var p in o)
-            console.log(o[p])
-        ",
+        "question": "What will be the equivalent code of the following JavaScript code?\nfor (var p in o)\n    console.log(o[p])",
         "options": [
-			"for (var i = 0i < a.lengthi++)
-     console.log(a[i])
-            ",
-			"for (int i = 0i < a.lengthi++)
-     console.log(a[i])
-            ",
-			"for (var i = 0i <= a.lengthi++)
-     console.log(a[i])
-            ",
-			"for (var i = 1i < a.lengthi++)
-     console.log(a[i])
-            "
+			"for (var i = 0i < a.lengthi++)\n    console.log(a[i])",
+			"for (int i = 0i < a.lengthi++)\n    console.log(a[i])",
+			"for (var i = 0i <= a.lengthi++)\n    console.log(a[i])",
+			"for (var i = 1i < a.lengthi++)\n    console.log(a[i])"
 		],
         "correctIndex": 0
 	},
@@ -660,14 +612,7 @@
 	},
     {
         "id": 57,
-        "question": "What will be the role of the continue keyword in the following JavaScript code snippet?
-        while (a != 0) {
-            if (a == 1)
-                continue
-            else
-                a++
-        }
-        ",
+        "question": "What will be the role of the continue keyword in the following JavaScript code snippet?\n    while (a != 0) {\n        if (a == 1)\n        continue\n    else\n        a++\n}",
         "options": [
 			"The continue keyword restarts the loop",
 			"The continue keyword skips the next iteration",
@@ -690,14 +635,7 @@
 	},
     {
         "id": 59,
-        "question": "What will be the output of the following JavaScript code?
-
-        var a = 10
-        do {
-            a += 1
-            console.log(a)
-        } while (a < 5)
-        ",
+        "question": "What will be the output of the following JavaScript code?\nvar a = 10\ndo {\n    a += 1\n    console.log(a)\n} while (a < 5)",
         "options": [
 			"11121314",
 			"1112",
@@ -709,16 +647,7 @@
 
     {
         "id": 60,
-        "question": "What will be the output of the following JavaScript code?
-
-        var a = 0
-        var b = 0
-        while (a < 3) {
-            a++
-            b += a
-            console.log(b)
-        }
-        ",
+        "question": "What will be the output of the following JavaScript code?\nvar a = 0\nvar b = 0\nwhile (a < 3) {\n    a++\n    b += a\n    console.log(b)\n}",
         "options": [
 			"135",
 			"123",
