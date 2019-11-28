@@ -61,24 +61,27 @@ function displayToast(msg) {
 
 function verifyUser() {
 	let userDetails;
-	if (localStorage.getItem("userDetails") === null) {
-		userDetails = [];
+
+	if (username.value === null || username.value === "" || password.value === null || password.value === "") {
+		displayToast("Please enter login credentials.");
 	} else {
-		userDetails = JSON.parse(localStorage.getItem("userDetails"));
+		 if (localStorage.getItem("userDetails") === null) {
+		 	userDetails = [];
+		 } else {
+		 	userDetails = JSON.parse(localStorage.getItem("userDetails"));
+		 }
+
+		 console.log(userDetails);
+		 userDetails.forEach(current => {
+		 	if ((username.value === current["username"]) && (password.value === current["password"])) {
+		 		let currentUser = [current["name"], current["email"]];
+
+		 		localStorage.setItem("currentUser", JSON.stringify(currentUser));
+		 		window.location.href = "../quizGame/quizQuestions.html";
+		 	} else {
+		 		displayToast("Please recheck your login credentials.");
+		 		displayToast("Or try Sign Up");
+		 	}
+		 });
 	}
-
-	console.log(userDetails);
-	userDetails.forEach(current => {
-		console.log(current["username"]);
-		if ((username.value === current["username"]) && (password.value === current["password"])) {
-			let currentUser = [current["name"], current["email"]];
-
-			localStorage.setItem("currentUser", JSON.stringify(currentUser));
-			window.location.href = "../quizGame/quizQuestions.html";
-		} else {
-			displayToast("Please recheck your login credentials.");
-			displayToast("Or try Sign Up");
-		}
-	});
-
 }

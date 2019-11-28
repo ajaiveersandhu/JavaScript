@@ -44,9 +44,9 @@ function signUp() {
 	} else if (password.value != verifyPassword.value) {
 		displayToast("Password MISS-MATCH");
 		return false;
-	// } else if (password.value.length <= 8) {
-	// 	displayToast("Minimum Password length 8");
-	// 	return false;
+	} else if (password.value.length <= 8) {
+		displayToast("Minimum Password length 8");
+		return false;
 	} else {
 		userEntry = [{
 			"name": firstName.value,
@@ -55,6 +55,8 @@ function signUp() {
 			"password": password.value
 		}];
 		storeUserDetails();
+
+		window.location.href = "../quizGame/quizQuestions.html";
 	}
 }
 
