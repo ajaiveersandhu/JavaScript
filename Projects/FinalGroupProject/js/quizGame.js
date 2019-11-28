@@ -60,8 +60,10 @@ function ready() {
 		clearInterval(interval);
 		// remove question time bar class
 		document.querySelector(".timer-bar").classList.remove("timer-bar-fill");
-
-		displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
+		
+		localStorage.setItem("score", numberOfCorrectAnswers);
+		window.location.href = "../result/result.html";
+		// displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
 	});
 }
 
@@ -100,8 +102,10 @@ function loadQuestionFunctions() {
 		clearInterval(interval);
 		// remove question time bar class
 		document.querySelector(".timer-bar").classList.remove("timer-bar-fill");
+		localStorage.setItem("score", numberOfCorrectAnswers);
 
-		displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
+		window.location.href = "../result/result.html";
+		// displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
 	} else {
 		// adding class for animation to start
 		document.querySelector(".timer-bar").classList.add("timer-bar-fill");

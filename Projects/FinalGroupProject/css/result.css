@@ -1,0 +1,36 @@
+body {
+	background-color: var(--dark-background);
+	color: white;
+}
+
+.container {
+	margin: 3vh auto;
+}
+
+.score-card {
+	color: var(--faded-text);
+}
+
+.score-result {
+	background-color: var(--card-background);
+	padding: 2vh 3vw;
+}
+
+.trophy {
+	margin: 5vh auto;
+}
+
+.your-score {
+	color: var(--faded-text);
+}
+
+.btn-large {
+	font-size: 1rem;
+	border: 1px solid var(--main-purple);
+	border-radius: 7px;
+	background-color: var(--main-purple);
+}
+
+.btn-large:hover {
+	background-color: var(--main-purple-hover);
+}

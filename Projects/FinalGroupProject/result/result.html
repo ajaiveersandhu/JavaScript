@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<link rel="stylesheet" href="../css/result.css">
+	<title>Quiz Game | Home</title>
+</head>
+<body>
+	<div class="container">
+		<div class="score-result z-depth-4">
+			<div class="score center-align">
+				<h4 class="score-card">Score Card</h4>
+				<h1 class="congrats">Congratulations !!</h1>
+				<img src="../imgs/trophy.png" class="responsive-img trophy center-align">
+
+				<h5 class="your-score center-align">Your Score</h5>
+				<h2 class="fetched-score"><span class="scored"></span></h2>
+
+				<button class="btn-large waves-effect waves-light"><a href="../homepage/homepage.html">Go Home</a></button>
+			</div>
+		</div>
+	</div>
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		if(localStorage.getItem("score") === null) {
+			document.querySelector(".scored").innerHTML = '0';
+		} else {
+			document.querySelector(".scored").innerHTML = localStorage.getItem("score");
+		}
+	</script>
+
+</body>
+</html>
