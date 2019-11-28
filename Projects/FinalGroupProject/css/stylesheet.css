@@ -1,7 +1,8 @@
 @font-face {
-	font-family: "Futura", "Futura Md BT";
+	font-family: "Futura", "Futura Md BT", "Futura Bk BT";
 	src: url("../fonts/futur.ttf");
 	src: url("../fonts/futura\ medium\ bt.ttf");
+	src: url("../fonts/futura\ book\ font.ttf");
 }
 
 :root {
