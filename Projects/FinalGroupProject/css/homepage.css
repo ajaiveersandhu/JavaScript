@@ -91,14 +91,18 @@ nav {
 }
 
 .formality-stuff {
-	margin: 2vh 3vw 0vh 3vw;
+	margin: 0% 3vw;
 }
 
 .formality-stuff .text {
 	font-size: 1.5rem;
 }
 
+#contact-us {
+	margin: 5% auto;
+}
+
 .contact-us {
-	margin: 15% auto;
+	margin: 7% auto;
 }
 
