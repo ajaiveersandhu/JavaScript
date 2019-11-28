@@ -77,7 +77,7 @@ function verifyUser() {
 				let currentUser = [current["name"], current["email"]];
 
 				localStorage.setItem("currentUser", JSON.stringify(currentUser));
-				window.location.href = "../quizGame/quizQuestions.html";
+				window.location.href = "../homepage/homepage.html";
 			} else {
 				displayToast("Please recheck your login credentials.");
 				displayToast("Or try Sign Up");

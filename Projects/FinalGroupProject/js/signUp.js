@@ -59,7 +59,7 @@ function signUp() {
 		currentUser = [firstName.value, email.value];
 		storeUserDetails();
 
-		window.location.href = "../quizGame/quizQuestions.html";
+		window.location.href = "../homepage/homepage.html";
 	}
 }
 
