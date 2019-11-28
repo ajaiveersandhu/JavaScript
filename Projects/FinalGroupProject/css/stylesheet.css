@@ -6,10 +6,13 @@
 
 :root {
 	--background: #F8F8F8;
+	--dark-background: #171B34;
+	--card-background: #282E49;
 	--text-color: #24221F;
 	--faded-text: #8D8A86;
 	--main-purple: #4B23F4;
 	--main-purple-hover: rgb(36, 2, 189);
+	--profile-color: #09C9D1;
 }
 
 * {
@@ -17,6 +20,4 @@
 	padding: 0%;
 	box-sizing: border-box;
 	font-family: "Futura Md BT";
-	background-color: var(--background);
-	color: var(--text-color);
 }

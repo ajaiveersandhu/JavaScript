@@ -1,5 +1,7 @@
 body {
 	min-width: 420px;
+	background-color: var(--background);
+	color: var(--text-color);
 }
 
 #content {
