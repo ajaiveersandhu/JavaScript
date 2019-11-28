@@ -44,18 +44,18 @@ body {
 
 .time-bar {
 	height: 15px;
-	width: 18rem;
+	width: 16rem;
 	border-radius: 15px;
 	background-color: var(--faded-text);
 	position: absolute;
 	bottom: -20px;
-	left: -10px;
+	left: -5px;
 	transition: transform 0.5s ease;
 }
 
-.fill-bar {
+.start-filling-bar-mins {
 	border-radius: 15px;
-	animation: fill 120s linear;
+	animation: fill 600s linear 1s;
 	height: 100%;
 	background-color: var(--main-purple);
 }
@@ -162,18 +162,10 @@ body {
 	width: 100%;
 }
 
-.hover-shadow {
-	display: inline-block;
-	vertical-align: middle;
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px transparent;
-	margin: 10px;
-	transition: transform 0.3s ease;
+input[type="radio"]:checked {
+	border: 1px solid var(--profile-color);
 }
 
-.hover-shadow:hover,
-.hover-shadow:focus,
-.hover-shadow:active, 
 .time-bar:hover,
 .display-user-name:hover {
 	transform: scale(1.1);
@@ -213,9 +205,9 @@ body {
 	background-color: var(--faded-text);
 }
 
-.timer-bar {
+.timer-bar-fill {
 	border-radius: 15px;
-	animation: fill 10s linear 1;
+	animation: fill 15s linear forwards infinite;
 	height: 100%;
 	background-color: var(--profile-color);
 }

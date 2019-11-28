@@ -25,7 +25,7 @@
 					</div>
 
 					<div class="time-remaining valign-wrapper right-align">
-						<span class="time-remainig-bar">Time Remaining : <span class="minsLefts">10</span> Mins</span>
+						<span class="time-remainig-bar">Time Remaining : <span class="minsLeft"></span> : <span class="secsLeft">00</span></span>
 						<div class="time-bar">
 							<div class="fill-bar"></div>
 						</div>
@@ -35,43 +35,43 @@
 				<div class="divider"></div>
 
 				<div class="questions">
-					<p><span class="question-number">5</span>/10 Questions</p>
+					<p><span class="question-number"></span>/10 Questions</p>
 				</div>
 
 				<div class="questionCard">
-					<span class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sed molestias sunt!</span>
+					<span class="question"></span>
 				</div>
 
 				<div class="options">
 					<div class="questionChoice1 hover-shadow">
 						 <p class="option">
 						 	<label>
-						 		<input name="group1" type="radio"/>
-						 		<span>Lorem, Lorem ipsum dolor sit amet. dolor.</span>
+						 		<input name="group1" id="option1" type="radio" />
+						 		<span class="option1"></span>
 						 	</label>
 						</p>
 					</div>
 					<div class="questionChoice2 hover-shadow">
 						<p class="option">
 							<label>
-								<input name="group1" type="radio"/>
-								<span>Lorem, ipsum dolor.</span>
+								<input name="group1" id="option2" type="radio"/>
+								<span class="option2"></span>
 							</label>
 						</p>
 					</div>
 					<div class="questionChoice3 hover-shadow">
 						<p class="option">
 						 	<label>
-						 		<input name="group1" type="radio"/>
-						 		<span>Lorem, ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor.</span>
+						 		<input name="group1" id="option3" type="radio" />
+						 		<span class="option3"></span>
 						 	</label>
 						</p>
 					</div>
 					<div class="questionChoice4 hover-shadow">
 						<p class="option">
 						 	<label>
-						 		<input name="group1" type="radio"/>
-						 		<span>Lorem, ipsum dolor.</span>
+						 		<input name="group1" id="option4" type="radio" />
+						 		<span class="option4"></span>
 						 	</label>
 						</p>
 					</div>
@@ -90,7 +90,7 @@
 
 		<!--JavaScript at end of body for optimized loading-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src="../js/quizGame.js"></script>
+		<script src="../js/quizGame.js" async></script>
 	</body>
 
 </html>

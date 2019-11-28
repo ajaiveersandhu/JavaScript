@@ -22,3 +22,18 @@
 	box-sizing: border-box;
 	font-family: "Futura Md BT";
 }
+
+.hover-shadow {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	margin: 10px;
+	transition: transform 0.3s ease;
+}
+
+.hover-shadow:hover,
+.hover-shadow:focus,
+.hover-shadow:active {
+	transform: scale(1.1);
+}
