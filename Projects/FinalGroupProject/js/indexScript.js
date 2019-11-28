@@ -66,20 +66,22 @@ function verifyUser() {
 		displayToast("Please enter login credentials.");
 	} else {
 		if (localStorage.getItem("userDetails") === null) {
-		userDetails = [];
+			userDetails = [];
+			displayToast("Please recheck your login credentials.");
+			displayToast("Or try Sign Up");
 		} else {
-		userDetails = JSON.parse(localStorage.getItem("userDetails"));
+			userDetails = JSON.parse(localStorage.getItem("userDetails"));
 		}
 		userDetails.forEach(current => {
-		 	if ((username.value === current["username"]) && (password.value === current["password"])) {
-		 		let currentUser = [current["name"], current["email"]];
+			if ((username.value === current["username"]) && (password.value === current["password"])) {
+				let currentUser = [current["name"], current["email"]];
 
-		 		localStorage.setItem("currentUser", JSON.stringify(currentUser));
-		 		window.location.href = "../quizGame/quizQuestions.html";
-		 	} else {
-		 		displayToast("Please recheck your login credentials.");
-		 		displayToast("Or try Sign Up");
-		 	}
+				localStorage.setItem("currentUser", JSON.stringify(currentUser));
+				window.location.href = "../quizGame/quizQuestions.html";
+			} else {
+				displayToast("Please recheck your login credentials.");
+				displayToast("Or try Sign Up");
+			}
 		});
 	}
 }
