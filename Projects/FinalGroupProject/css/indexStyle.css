@@ -154,3 +154,10 @@ body {
 		width: 90%;
 	}
 }
+
+#toast-container {
+	min-width: 10%;
+	right: 50%;
+	transform: translateX(50%) translateY(90%);
+	opacity: 0.6;
+}

@@ -253,3 +253,10 @@ input[type="radio"]:checked {
 .next-question:hover {
 	background-color: var(--main-purple-hover);
 }
+
+#toast-container {
+	min-width: 10%;
+	right: 50%;
+	transform: translateX(50%) translateY(-40%);
+	opacity: 0.8;
+}

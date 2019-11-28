@@ -4,11 +4,12 @@ let question,
 	option3,
 	option4,
 	correctOption,
-	uiTimeMinsUpdate,
+	timeMinsUpdate,
 	radioButtonClicked,
 	nextQuestion,
 	endQuiz,
-	questionNumber;
+	questionNumber,
+	userFullName;
 
 let displayedQuestion = [];
 let randomQuestionFetch;
@@ -27,6 +28,10 @@ window.addEventListener("load", () => {
 	option3 = document.querySelector(".option3");
 	option4 = document.querySelector(".option4");
 	radioButtonClicked = document.querySelectorAll('input[name=group1]');
+	userFullName = document.querySelector(".user-full-name");
+
+	let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+	userFullName.innerHTML = currentUser[0]["name"];
 
 	questionNumber = document.querySelector(".question-number");
 	nextQuestion = document.querySelector(".next-question");
@@ -44,7 +49,7 @@ function ready() {
 	interval = setInterval(() => {
 
 		loadQuestionFunctions();
-	}, 10000);
+	}, 15000);
 
 	nextQuestion.addEventListener("click", () => {
 		document.querySelector(".timer-bar").classList.remove("timer-bar-fill");
@@ -56,7 +61,7 @@ function ready() {
 		// remove question time bar class
 		document.querySelector(".timer-bar").classList.remove("timer-bar-fill");
 
-		alert(`You had ${numberOfCorrectAnswers} correct answers.`);
+		displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
 	});
 }
 
@@ -91,12 +96,12 @@ function topRightTimer() {
 }
 
 function loadQuestionFunctions() {
-	if (displayedQuestion.length >= 3) {
+	if (displayedQuestion.length >= 10) {
 		clearInterval(interval);
 		// remove question time bar class
 		document.querySelector(".timer-bar").classList.remove("timer-bar-fill");
 
-		alert(`You had ${numberOfCorrectAnswers} correct answers.`);
+		displayToast(`You had ${numberOfCorrectAnswers} correct answers.`);
 	} else {
 		// adding class for animation to start
 		document.querySelector(".timer-bar").classList.add("timer-bar-fill");
@@ -151,10 +156,8 @@ function getAnswer() {
 function selectedAnswer(option) {
 	if (option === correctOption) {
 		numberOfCorrectAnswers = numberOfCorrectAnswers + 1;
-		console.log("correct : ", numberOfCorrectAnswers);
 	} else {
 		numberOfCorrectAnswers = numberOfCorrectAnswers;
-		console.log("wrong");
 	}
 
 	return numberOfCorrectAnswers;
@@ -163,5 +166,13 @@ function selectedAnswer(option) {
 function unCheckNextOptions() {
 	radioButtonClicked.forEach(radio => {
 		radio.checked = false;
+	});
+}
+
+function displayToast(msg) {
+	M.toast({
+		html: ` ${msg} `,
+		displayLength: 1500,
+		classes: 'rounded'
 	});
 }

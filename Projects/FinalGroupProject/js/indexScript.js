@@ -40,3 +40,45 @@ const FloatLabel = (() => {
 })();
 
 FloatLabel.init();
+
+let username,
+	password;
+
+window.addEventListener("load", () => {
+	username = document.querySelector("#username");
+	password = document.querySelector("#password");
+	
+	document.querySelector(".btn-login").addEventListener("click", verifyUser);
+});
+
+function displayToast(msg) {
+	M.toast({
+		html: ` ${msg} `,
+		displayLength: 1500,
+		classes: 'rounded'
+	});
+}
+
+function verifyUser() {
+	let userDetails;
+	if (localStorage.getItem("userDetails") === null) {
+		userDetails = [];
+	} else {
+		userDetails = JSON.parse(localStorage.getItem("userDetails"));
+	}
+
+	console.log(userDetails);
+	userDetails.forEach(current => {
+		console.log(current["username"]);
+		if ((username.value === current["username"]) && (password.value === current["password"])) {
+			let currentUser = [current["name"], current["email"]];
+
+			localStorage.setItem("currentUser", JSON.stringify(currentUser));
+			window.location.href = "../quizGame/quizQuestions.html";
+		} else {
+			displayToast("Please recheck your login credentials.");
+			displayToast("Or try Sign Up");
+		}
+	});
+
+}
