@@ -1,0 +1,58 @@
+body {
+	font-family: "Futura Md BT";
+	background-color: var(--background);
+	color: var(--text-color);
+}
+
+.fade {
+	color: var(--faded-text);
+}
+
+.col .s4 {
+	width: 50px !important;
+	margin: 0 5px;
+}
+
+.heading {
+	font-size: calc(4vh + 2vw);
+}
+
+.textLine {
+	font-size: 1.2rem;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+.inputBar {
+	border: 1px solid var(--faded-text);
+	background-color: white;
+	border-radius: 3px;
+	padding: 0 10px !important;
+	margin: 5px auto;
+}
+
+input {
+	border-bottom: 0px !important;
+	margin-bottom: 0 !important;
+	height: 2rem !important;
+}
+
+.btn {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 5px;
+	background-color: var(--main-purple);
+	margin: 60px auto;
+}
+
+.btn:hover {
+	background-color: var(--main-purple-hover);
+}
+
+#toast-container {
+	min-width: 10%;
+	right: 50%;
+	transform: translateX(50%) translateY(80%);
+	opacity: 0.6;
+}

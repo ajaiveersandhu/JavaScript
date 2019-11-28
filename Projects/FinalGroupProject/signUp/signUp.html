@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="../css/stylesheet.css">
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+		<link rel="stylesheet" href="../css/signUp.css">
+		<title>Final Group Project | Sign Up</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1 signUpCard">
+					<div class="sign-up-background center-align">
+						<img class="responsive-img" src="../imgs/sign-up-background.png" alt="">
+					</div>
+
+					<div class="row">
+						<h1 class="center-align s8 offset-s2 heading">SIGN UP</h1>
+					</div>
+
+					<div class="textLine">
+						<p class="fade center-align">Please enter the following details for Sign Up.</p>
+					</div>
+					<div class="inputBar col s8 offset-s2">
+						<label for="firstName" class="inputLable">FIRST NAME</label>
+						<input id="firstName" type="text" class="validate inputIn">
+					</div>
+
+					<div class="inputBar col s8 offset-s2">
+						<label for="username" class="inputLable">USERNAME</label>
+						<input id="username" type="text" class="validate inputIn">
+					</div>
+
+					<div class="inputBar col s8 offset-s2">
+						<label for="email" class="inputLable">EMAIL</label>
+						<input id="email" type="email" class="validate inputIn">
+						<span class="helper-text" data-error="wrong" data-success="right"></span>
+					</div>
+
+					<div class="inputBar col s8 offset-s2">
+						<label for="password" class="inputLable">PASSWORD</label>
+						<input id="password" type="password" class="validate inputIn">
+					</div>
+
+					<div class="inputBar col s8 offset-s2">
+						<label for="verifyPassword" class="inputLable">VERIFY PASSWORD</label>
+						<input id="verifyPassword" type="password" class="validate inputIn">
+					</div>
+				</div>
+
+				<div class="col l2 offset-l5 m4 offset-m4 s6 offset-s3 center-align">
+					<input type="submit" value="Sign Up" class="btn waves-effect waves-light btn-sign-up">
+				</div>
+			</div>
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<script src="../js/signUp.js"></script>
+	</body>
+</html>

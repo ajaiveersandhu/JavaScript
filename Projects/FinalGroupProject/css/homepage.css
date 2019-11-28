@@ -1,0 +1,108 @@
+body {
+	background-color: var(--dark-background);
+	color: white;
+}
+
+header {
+	position: sticky;
+	top: -15px;
+}
+
+nav {
+	background-color: var(--dark-background);
+	height: 70px;
+}
+
+.navigation {
+	width: 70%;
+	margin: 0 auto;
+	padding: 0vh 1vw;
+}
+
+.brand-logo {
+	font-family: "Futura";
+	font-weight: 900;
+	font-size: 4rem;
+}
+
+.fade {
+	color: var(--faded-text);
+	font-family: "Futura";
+	font-weight: 900;
+}
+
+.links a{
+	font-size: 1.2rem;
+}
+
+.container-home {
+	margin: 3vh auto 1vh auto;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: repeat(3, minmax(100px, auto));
+}
+
+.user-logo {
+	grid-row: 1 / 2;
+	align-self: flex-end;
+	justify-self: center;
+}
+
+.user-logo .avatar-img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-color: var(--profile-color);
+}
+
+.user-name {
+	grid-row: 2 / 3;
+	align-self: auto;
+	justify-self: center;
+}
+
+.user-name .welcome-text {
+	font-size: 1.75rem;
+	margin: auto;
+}
+
+.buttons {
+	grid-row: 3 / 4;
+	align-self: flex-start;
+	justify-self: center;
+}
+
+.start-quiz, 
+.btn-large {
+	font-size: 1.3rem;
+	border: 1px solid var(--main-purple);
+	border-radius: 7px;
+	background-color: var(--main-purple);
+	color: white;
+}
+
+.start-quiz:hover, 
+.btn-large:hover {
+	background-color: var(--main-purple-hover);
+}
+
+.container-about-us {
+	height: 100vh;
+}
+
+.formality-stuff {
+	margin: 0% 3vw;
+}
+
+.formality-stuff .text {
+	font-size: 1.5rem;
+}
+
+#contact-us {
+	margin: 5% auto;
+}
+
+.contact-us {
+	margin: 7% auto;
+}
+

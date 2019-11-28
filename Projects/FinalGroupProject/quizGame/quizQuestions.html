@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="../css/stylesheet.css">
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" href="../css/quizQuestions.css">
+		<title>Final Group Project</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="quizCard z-depth-4">
+				<div class="valign-wrapper header">
+					<div class="avatar">
+						<img src="../imgs/avatar.svg" class="circle avatarIcon  left-align">
+					</div>
+
+					<div class="display-user-name">
+						<span class="user-full-name"></span>
+					</div>
+
+					<div class="time-remaining valign-wrapper right-align">
+						<span class="time-remainig-bar">Time Remaining : <span class="minsLeft"></span> : <span class="secsLeft">00</span></span>
+						<div class="time-bar">
+							<div class="fill-bar"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="questions">
+					<p><span class="question-number"></span>/10 Questions</p>
+				</div>
+
+				<div class="questionCard">
+					<span class="question"></span>
+				</div>
+
+				<div class="options">
+					<div class="questionChoice1 hover-shadow">
+						 <p class="option">
+						 	<label>
+						 		<input name="group1" id="option1" type="radio" />
+						 		<span class="option1"></span>
+						 	</label>
+						</p>
+					</div>
+					<div class="questionChoice2 hover-shadow">
+						<p class="option">
+							<label>
+								<input name="group1" id="option2" type="radio"/>
+								<span class="option2"></span>
+							</label>
+						</p>
+					</div>
+					<div class="questionChoice3 hover-shadow">
+						<p class="option">
+						 	<label>
+						 		<input name="group1" id="option3" type="radio" />
+						 		<span class="option3"></span>
+						 	</label>
+						</p>
+					</div>
+					<div class="questionChoice4 hover-shadow">
+						<p class="option">
+						 	<label>
+						 		<input name="group1" id="option4" type="radio" />
+						 		<span class="option4"></span>
+						 	</label>
+						</p>
+					</div>
+				</div>
+
+				<div class="question-timer">
+					<div class="timer-bar"></div>
+				</div>
+
+				<div class="buttons">
+					<a href="#!" class="waves-effect waves-light end-quiz">End Quiz</a>
+					<a href="#!" class="waves-effect waves-light next-question">Next</a>
+				</div>
+			</div>
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="../js/quizGame.js" async></script>
+	</body>
+
+</html>

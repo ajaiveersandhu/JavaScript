@@ -1,0 +1,39 @@
+@font-face {
+	font-family: "Futura", "Futura Md BT", "Futura Bk BT";
+	src: url("../fonts/futur.ttf");
+	src: url("../fonts/futura\ medium\ bt.ttf");
+	src: url("../fonts/futura\ book\ font.ttf");
+}
+
+:root {
+	--background: #F8F8F8;
+	--dark-background: #171B34;
+	--card-background: #282E49;
+	--text-color: #24221F;
+	--faded-text: #8D8A86;
+	--main-purple: #4B23F4;
+	--main-purple-hover: rgb(36, 2, 189);
+	--profile-color: #09C9D1;
+}
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	font-family: "Futura Md BT";
+}
+
+.hover-shadow {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	margin: 10px;
+	transition: transform 0.3s ease;
+}
+
+.hover-shadow:hover,
+.hover-shadow:focus,
+.hover-shadow:active {
+	transform: scale(1.1);
+}

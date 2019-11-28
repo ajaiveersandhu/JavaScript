@@ -1,0 +1,262 @@
+body {
+	background-color: var(--dark-background);
+}
+
+.quizCard {
+	margin-top: 40px;
+	background-color: var(--card-background);
+	color: white !important;
+}
+
+.header {
+	padding: 2vh 3vw;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.avatar {
+	grid-column: 1 / 2;
+	justify-content: space-around;
+}
+
+.avatarIcon {
+	height: 50px;
+	width: 50px;
+	background-color: var(--profile-color);
+}
+
+.display-user-name {
+	grid-column: 2 / 4;
+	justify-self: self-start;
+	transition: transform 0.5s ease;
+}
+
+.user-full-name {
+	font-size: 1.7rem;
+}
+
+.time-remaining {
+	grid-column: 4 / 7;
+	justify-self: self-end;
+	font-size: 1.4rem;
+	position: relative;
+}
+
+.time-bar {
+	height: 15px;
+	width: 16rem;
+	border-radius: 15px;
+	background-color: var(--faded-text);
+	position: absolute;
+	bottom: -20px;
+	left: -5px;
+	transition: transform 0.5s ease;
+}
+
+.start-filling-bar-mins {
+	border-radius: 15px;
+	animation: fill 600s linear 1s;
+	height: 100%;
+	background-color: var(--main-purple);
+}
+
+@keyframes fill {
+	0% {
+		width: 1%;
+		border-radius: 15px;
+	}
+	100% {
+		width: 100%;
+		border-radius: 15px;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.header {
+		grid-template-rows: repeat(3, 50px);
+		grid-template-columns: 1fr;
+	}
+
+	.avatar {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.display-user-name {
+		grid-row: 2 / 3;
+		grid-column: 1 / 2;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.time-remaining {
+		grid-row: 3 / 4;
+		grid-column: 1 / 2;
+		justify-self: center;
+		align-self: center;
+	}
+
+}
+
+.questions {
+	text-align: center;
+	margin: 4vh auto;
+	color: var(--faded-text);
+	font-size: 1.2rem;
+}
+
+.question-number {
+	color: white;
+}
+
+.questionCard {
+	font-size: calc(2vh + 1.5vw);
+	font-weight: 700;
+	margin: auto;
+	padding: 2vh 10vh;
+}
+
+.options {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3vh 10vh;
+	justify-items: self-start;
+	gap: 1rem;
+}
+
+.questionChoice1 {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+}
+
+.questionChoice2 {
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+}
+
+.questionChoice3 {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+}
+
+.questionChoice4 {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+}
+
+.options * {
+	color: white;
+}
+
+.options .option label span {
+	font-size: 1.5rem;
+}
+
+.option {
+	border: 1px solid var(--faded-text);
+	border-radius: 10px;
+	padding: 1rem 1.5rem 1rem 0.5rem;
+	width: 100%;
+}
+
+input[type="radio"]:checked {
+	border: 1px solid var(--profile-color);
+}
+
+.time-bar:hover,
+.display-user-name:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (max-width:960px) {
+	.options {
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: 1fr;
+	}
+
+	.questionChoice1 {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+	}
+
+	.questionChoice2 {
+		grid-row: 2 / 3;
+		grid-column: 1 / 2;
+	}
+
+	.questionChoice3 {
+		grid-row: 3 / 4;
+		grid-column: 1 / 2;
+	}
+
+	.questionChoice4 {
+		grid-row: 4 / 5;
+		grid-column: 1 / 2;
+	}
+}
+
+.question-timer {
+	height: 15px;
+	width: 100%;
+	border-radius: 15px;
+	background-color: var(--faded-text);
+}
+
+.timer-bar-fill {
+	border-radius: 15px;
+	animation: fill 15s linear forwards infinite;
+	height: 100%;
+	background-color: var(--profile-color);
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3vh 11vh;
+}
+
+.end-quiz {
+	grid-column: 1 / 2;
+	justify-self: left;
+	text-align: center;
+	font-size: 1.1rem;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid var(--faded-text);
+	border-radius: 7px;
+	background-color: #DEDEDE;
+	color: black;
+}
+
+.end-quiz:hover {
+	background-color: rgba(175, 174, 174, 0.917);
+}
+
+.next-question {
+	grid-column: 2 / 3;
+	justify-self: right;
+	text-align: center;
+	font-size: 1.1rem;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid var(--main-purple);
+	border-radius: 7px;
+	background-color: var(--main-purple);
+	color: white;
+}
+
+.next-question:hover {
+	background-color: var(--main-purple-hover);
+}
+
+#toast-container {
+	min-width: 10%;
+	right: 50%;
+	transform: translateX(50%) translateY(-40%);
+	opacity: 0.8;
+}

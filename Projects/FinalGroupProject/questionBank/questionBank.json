@@ -1,0 +1,659 @@
+[
+    {
+        "id": 1,
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "options": ["<javascript>", "<scripting>", "<script>", "<js>"],
+        "correctIndex": 0
+	},
+    {
+        "id": 2,
+        "question": "Which of the following is a valid type of function javascript supports?",
+        "options": ["named function", "anonymous function", "Both of the above", "None of the above"],
+        "correctIndex": 2
+	},
+    {
+        "id": 3,
+        "question": "Which built-in method returns the index within the calling String object of the first occurrence of the specified value?",
+        "options": ["getIndex()", "location()", "indexOf()", "None of the above"],
+        "correctIndex": 2
+	},
+    {
+        "id": 4,
+        "question": "Which built-in method returns the characters in a string beginning at the specified location?",
+        "options": ["substr()", "getSubstring()", "slice()", "None of the above"],
+        "correctIndex": 0
+	},
+    {
+        "id": 5,
+        "question": "The script tag must be placed in __________",
+        "options": ["the head tag", "the head or body", "the title or head", "after the body tag"],
+        "correctIndex": 1
+	},
+    {
+        "id": 6,
+        "question": "A JavaScript program developed on a Unix Machine ________",
+        "options": [
+			"will throw errors and exceptions",
+			"must be restricted to a Unix Machine only",
+			" will work perfectly well on a Windows Machine",
+			"will be displayed as a JavaScript text on the browser"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 7,
+        "question": "JavaScript is ideal to ________",
+        "options": [
+			"make computations in HTML simpler",
+			"minimize storage requirements on the web server",
+			" increase the download time for the client",
+			"increase the loading time of the website"
+		],
+        "correctIndex": 1
+	},
+    {
+        "id": 8,
+        "question": "Which attribute is used to specify that the script is executed when the page has finished parsing? (only for external scripts)",
+        "options": [
+			"parse",
+			"a sync",
+			"defer",
+			"type"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 9,
+        "question": "JavaScript Code can be called by using ____________",
+        "options": [
+			"RMI",
+			"Triggering Event",
+			" Preprocessor",
+			" Function/Method"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 10,
+        "question": " JavaScript can be written __________",
+        "options": [
+			" directly into JS file and included into HTML",
+			"directly on the server page",
+			"directly into HTML pages",
+			"directly into the css file"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 11,
+        "question": " Which of the following Attribute is used to include External JS code inside your HTML Document?",
+        "options": [
+			"src",
+			" ext",
+			"script",
+			"link"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 12,
+        "question": " A proper scripting language is a __________",
+        "options": [
+			"High level programming language",
+			"Assembly level programming language",
+			"Machine level programming language",
+			"Low level programming language"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 13,
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo'></p>\nvar txt1 = 'good'\nvar txt2 = 'day'\ndocument.getElementById('demo').innerHTML = txt1 + txt2",
+        "options": [
+			"good day",
+			"goodday",
+			"error",
+			"undefined"
+		],
+        "correctIndex": 1
+	},
+    {
+        "id": 14,
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo'></p>\n<script >\n    var x = 5\n    var y = 2\n    var z = x % y\n    document.getElementById('demo').innerHTML = z\n</script>",
+        "options": [
+			"0",
+			"1",
+			"2",
+			"5"
+		],
+        "correctIndex": 1
+	},
+    {
+        "id": 15,
+        "question": "What will be the output of the following JavaScript code?\n<p id='demo'></p>\n<script>\n    var x = 10\n    x *= 5\n    document.getElementById('demo').innerHTML = x \n</script>",
+        "options": [
+			"5",
+			"10",
+			"50",
+			"Error"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 16,
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo' > < /p>\n<script >\n    txt1 = “one”\n    txt1 += “two”\n    document.getElementById('demo').innerHTML = txt1\n</script>",
+        "options": [
+			" onetwo",
+			"one two",
+			"error",
+			"undefined"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 17,
+        "question": "What will be the output of the following JavaScript code?\n<p id = 'demo'> </p>\n<script>\ndocument.getElementById('demo').innerHTML = typeof 'John' </script>",
+        "options": [
+			"integer",
+			"number",
+			"string",
+			"error"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 18,
+        "question": "What is the observation made in the following JavaScript code?\nvar count = [1, , 3]",
+        "options": [
+			"The omitted value takes “undefined”",
+			"This results in an error",
+			"This results in an exception",
+			"The omitted value takes an integer value"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 19,
+        "question": "What will be the output of the following JavaScript code?\nvar a1 = [, , , ]\nvar a2 = new Array(3)\n0 in a1\n0 in a2 ",
+        "options": [
+			"true false",
+			"false true",
+			"true true",
+			"false true"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 20,
+        "question": "The pop() method of the array does which of the following task?",
+        "options": [
+			"decrements the total length by 1",
+			"increments the total length by 1",
+			"prints the first element but no effect on the length",
+			"updates the element"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 21,
+        "question": "What is the observation made in the following JavaScript code?\nif (!a[i]) continue",
+        "options": [
+			"Skips the defined elements",
+			"Skips the existent elements",
+			"Skips the null elements",
+			"Skips the defined & existent elements"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 22,
+        "question": "What will happen if reverse() and join() methods are used simultaneously ? ",
+        "options" : [
+			"Reverses and stores in the same array",
+			"Reverses and concatenates the elements of the array",
+			"Reverses",
+			"Stores the elements of an array in normal order"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 23,
+        "question": "What will be the possible output of the following JavaScript code?\nvar a = [1, 2, 3, 4, 5]\na.slice(0, 3)",
+        "options": [
+			"Returns [1,2,3]",
+			"Returns [4,5]",
+			"Returns [1,2,3,4]",
+			"Returns [1,2,3,4,5]"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 24,
+        "question": "What will be the shift() output of the following JavaScript code?\nvar a = []\na.unshift(1)\na.unshift(22)\na.shift()\na.unshift(3, [4, 5])\na.shift()\na.shift()\na.shift()\n",
+        "options": [
+			"1",
+			"[4,5]",
+			"[3,4,5]",
+			"Exception is thrown"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 25,
+        "question": "The primary purpose of the array map() function is that it __________",
+        "options": [
+			"maps the elements of another array into itself",
+			"passes each element of the array and returns the necessary mapped elements",
+			"passes each element of the array on which it is invoked to the function you specify, and returns an array containing the values returned by that function",
+			"pass the elements of the array into another array"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 26,
+        "question": "The reduce and reduceRight methods follow a common operation called __________",
+        "options": [
+			"filter and fold",
+			"inject and fold",
+			"finger and fold",
+			"fold"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 27,
+        "question": "The method or operator used to identify the array is __________",
+        "options": [
+			"isarrayType()",
+			"==",
+			"===",
+			"typeof"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 28,
+        "question": " What will be the output of the following JavaScript code?\nvar val1 = [1, 2, 3]\nvar val2 = [6, 7,8]\nvar result = val1.concat(val2)\ndocument.writeln(result)\n",
+        "options": [
+			"1, 2, 3",
+			"Error",
+			" 1, 2, 3, 6, 7, 8",
+			"123"
+		],
+        "correctIndex": 2
+	},
+
+    {
+        "id": 29,
+        "question": "What will be the output of the following JavaScript code?\nvar values = [1, 2, 3, 4]\nvar ans = values.slice(1)\ndocument.writeln(ans)\n",
+        "options": [
+			"1,2,3,4",
+			"2,3,4",
+			"1, 3, 4",
+			"error"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 30,
+        "question": "What will be the output of the following JavaScript code?\nint sum = 0\nvar arr = [10, 15, 20, 30]\narr.forEach(function myFunction(element) {\n    sum = sum + element\n})\ndocument.writeln(sum)",
+        "options": [
+			"70",
+			"75",
+			"10",
+			"error"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 31,
+        "question": "What will be the output of the following JavaScript code?\nvar values = ['One', 'Two', 'Three']\nvar ans = values.shift()\ndocument.writeln(ans)",
+        "options": [
+			"one",
+			"two",
+			"three",
+			"error"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 32,
+        "question": "What will be the output of the following JavaScript code?\nvar arr = [1, 2, 3]\nvar rev = \narr.reverse()\ndocument.writeln(rev)",
+        "options": [
+			"1, 2, 3",
+			"3, 2, 1",
+			"3",
+			"1"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 33,
+        "question": "The function definitions in JavaScript begins with _____________",
+        "options": [
+			"Identifier and Parentheses",
+			"Return type and Identifier",
+			"Return type, Function keyword, Identifier and Parentheses",
+			"Identifier and Return type"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 34,
+        "question": "What will be the output of the following JavaScript code?\nfunction printprops(o) {\n    for (var p in o)\nconsole.log(p + ': ' + o[p] + '\n')}",
+        "options": [
+			" Prints the contents of each property of o",
+			"Returns undefined",
+			"Prints only one property",
+			"Prints the address of elements"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 35,
+        "question": "When does the function name become optional in JavaScript?",
+        "options": [
+			"When the function is defined as a looping statement",
+			"When the function is defined as expressions",
+			" When the function is predefined",
+			"when the function is called"
+		],
+        "correctIndex": 1
+	},
+    {
+        "id": 36,
+        "question": "What is the purpose of a return statement in a function?",
+        "options": [
+			"Returns the value and continues executing rest of the statements, if any",
+			"Returns the value and stops the program",
+			"Returns the value and stops executing the function",
+			"Stops executing the function and returns the value"
+		],
+        "correctIndex": 3
+	},
+
+    {
+        "id": 37,
+        "question": "What will happen if a return statement does not have an associated expression?",
+        "options": [
+			"It returns the value 0",
+			"It will throw an exception",
+			"It returns the undefined value",
+			"It will throw an error"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 38,
+        "question": "A function with no return value is called ___________",
+        "options": [
+			" Procedures",
+			"Method",
+			"Static function",
+			"Dynamic function"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 39,
+        "question": "The function stops its execution when it encounters?",
+        "options": [
+			"continue statement",
+			"break statement",
+			"goto statement",
+			"return statement"
+		],
+        "correctIndex": 3
+	},
+
+    {
+        "id": 40,
+        "question": "Which keyword is used to define the function in javascript?",
+        "options": [
+			"void",
+			"int",
+			"function",
+			"main"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 41,
+        "question": "Which keyword is used to define the function in javascript?",
+        "options": [
+			"o(x,y)",
+			" o.m(x) && o.m(y)",
+			"m(x,y)",
+			"o.m(x,y)"
+		],
+        "correctIndex": 3
+	},
+
+    {
+        "id": 42,
+        "question": " A function with no return value is called ___________",
+        "options": [
+			"Procedures",
+			"Method",
+			"Static function",
+			"Dynamic function"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 43,
+        "question": "",
+        "options": [
+			"option1",
+			"option2",
+			"option3",
+			"option4"
+		],
+        "correctIndex": 2
+	},
+
+    {
+        "id": 44,
+        "question": "The function stops its execution when it encounters?",
+        "options": [
+			"continue statement",
+			"break statement",
+			"goto statement",
+			"return statement"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 45,
+        "question": "Which keyword is used to define the function in javascript?",
+        "options": [
+			"void",
+			"int",
+			"function",
+			"main"
+		],
+        "correctIndex": 2
+	},
+
+    {
+        "id": 46,
+        "question": "Which is an equivalent code to invoke a function m of class o that expects two arguments x and y?",
+        "options": [
+			"o(x,y)",
+			"o.m(x) && o.m(y)",
+			"m(x,y)",
+			"o.m(x,y)"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 47,
+        "question": "What will be the equivalent code of the following JavaScript code?\no.m(x, y)",
+        "options": [
+			" o.m(x) && o.m(y)",
+			"o[“m”](x,y)",
+			"o(m)[“x”,”y”]",
+			"o.m(x && y)"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 48,
+        "question": " What will be the output of the following JavaScript code?\nfunction info() {\n    int a = 1\n    int b = 2\n    return a * b\n}\ndocument.write(info())\n",
+        "options": [
+			"1",
+			"2",
+			"3",
+			"error"
+		],
+        "correctIndex": 1
+	},
+    {
+        "id": 49,
+        "question": "What will be the output of the following JavaScript code?\nvar arr = [7, 5, 9, 1]\nvar value = Math.max.apply(null, arr)\ndocument.writeln(value)",
+        "options": [
+			"7",
+			"5",
+			"1",
+			"9"
+		],
+        "correctIndex": 3
+	},
+
+    {
+        "id": 50,
+        "question": "What will be the output of the following JavaScript code?\nvar pow = new Function('num1', 'num2','return Math.pow(num1,num2)')\ndocument.writeln(pow(2, 3))",
+        "options": [
+			"2",
+			"3",
+			"8",
+			"error"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 51,
+        "question": "What are the three important manipulations done in a for loop on a loop variable?",
+        "options": [
+			"Updation, Incrementation, Initialization",
+			" Initialization,Testing, Updation",
+			"Testing, Updation, Testing",
+			"Initialization,Testing, Incrementation"
+		],
+        "correctIndex": 1
+	},
+
+    {
+        "id": 52,
+        "question": "What will the following JavaScript code snippet work? If not, what will be the error?\nfunction tail(o) {\n    for ( o.next o = o.next)\n    return o\n}",
+        "options": [
+			"No, this will throw an exception as only numerics can be used in a for loop",
+			"No, this will not iterate",
+			"Yes, this will work",
+			"No, this will result in a runtime error with the message “Cannot use Linked List”"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 53,
+        "question": "What will be the equivalent code of the following JavaScript code?\nfor (var p in o)\n    console.log(o[p])",
+        "options": [
+			"for (var i = 0i < a.lengthi++)\n    console.log(a[i])",
+			"for (int i = 0i < a.lengthi++)\n    console.log(a[i])",
+			"for (var i = 0i <= a.lengthi++)\n    console.log(a[i])",
+			"for (var i = 1i < a.lengthi++)\n    console.log(a[i])"
+		],
+        "correctIndex": 0
+	},
+
+    {
+        "id": 54,
+        "question": "One of the special features of an interpreter in reference with the for loop is that ___________",
+        "options": [
+			"Before each iteration, the interpreter evaluates the variable expression and assigns the name of the property",
+			" The iterations can be infinite when an interpreter is used",
+			"The body of the loop is executed only once",
+			"the iteration is finite when an interpreter is used"
+		],
+        "correctIndex": 0
+	},
+    {
+        "id": 55,
+        "question": "What will happen if the body of a for/in loop deletes a property that has not yet been enumerated?",
+        "options": [
+			"The property will be stored in a cache",
+			"The loop will not run",
+			"That property will not be enumerated",
+			"The property will be enumerated"
+		],
+        "correctIndex": 2
+	},
+
+    {
+        "id": 56,
+        "question": "What will be the step of the interpreter in a jump statement when an exception is thrown?",
+        "options": [
+			"The interpreter stops its work",
+			"The interpreter throws another exception",
+			"The interpreter jumps to the nearest enclosing exception handler",
+			"The interpreter throws an error"
+		],
+        "correctIndex": 2
+	},
+    {
+        "id": 57,
+        "question": "What will be the role of the continue keyword in the following JavaScript code snippet?\n    while (a != 0) {\n        if (a == 1)\n        continue\n    else\n        a++\n}",
+        "options": [
+			"The continue keyword restarts the loop",
+			"The continue keyword skips the next iteration",
+			"The continue keyword skips the rest of the statements in that iteration",
+			"The continue keyword breaks out of the loop"
+		],
+        "correctIndex": 2
+	},
+
+    {
+        "id": 58,
+        "question": "Among the keywords below, which one is not a statement?",
+        "options": [
+			"debugger",
+			"with",
+			"if",
+			"use strict"
+		],
+        "correctIndex": 3
+	},
+    {
+        "id": 59,
+        "question": "What will be the output of the following JavaScript code?\nvar a = 10\ndo {\n    a += 1\n    console.log(a)\n} while (a < 5)",
+        "options": [
+			"11121314",
+			"1112",
+			"12345",
+			"11"
+		],
+        "correctIndex": 3
+	},
+
+    {
+        "id": 60,
+        "question": "What will be the output of the following JavaScript code?\nvar a = 0\nvar b = 0\nwhile (a < 3) {\n    a++\n    b += a\n    console.log(b)\n}",
+        "options": [
+			"135",
+			"123",
+			"013",
+			"01"
+		],
+        "correctIndex": 0
+	}
+]
