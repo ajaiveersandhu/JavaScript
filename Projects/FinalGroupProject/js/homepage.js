@@ -7,4 +7,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-document.querySelector(".user-full-name").innerHTML = currentUser[0]["name"];
+document.querySelector(".user-full-name").innerHTML = currentUser[0];

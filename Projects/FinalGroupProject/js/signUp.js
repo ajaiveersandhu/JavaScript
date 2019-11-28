@@ -6,6 +6,8 @@ let firstName,
 
 let userEntry;
 
+let currentUser;
+
 
 window.addEventListener("load", () => {
 	firstName = document.querySelector("#firstName");
@@ -54,6 +56,7 @@ function signUp() {
 			"email": email.value,
 			"password": password.value
 		}];
+		currentUser = [firstName.value, email.value];
 		storeUserDetails();
 
 		window.location.href = "../quizGame/quizQuestions.html";
@@ -70,4 +73,5 @@ function storeUserDetails() {
 
 	userDetails.push(userEntry);
 	localStorage.setItem("userDetails", JSON.stringify(userEntry));
+	localStorage.setItem("currentUser", JSON.stringify(currentUser));
 }

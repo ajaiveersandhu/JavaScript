@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
 	userFullName = document.querySelector(".user-full-name");
 
 	let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-	userFullName.innerHTML = currentUser[0]["name"];
+	document.querySelector(".user-full-name").innerHTML = currentUser[0];
 
 	questionNumber = document.querySelector(".question-number");
 	nextQuestion = document.querySelector(".next-question");

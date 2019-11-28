@@ -65,14 +65,12 @@ function verifyUser() {
 	if (username.value === null || username.value === "" || password.value === null || password.value === "") {
 		displayToast("Please enter login credentials.");
 	} else {
-		 if (localStorage.getItem("userDetails") === null) {
-		 	userDetails = [];
-		 } else {
-		 	userDetails = JSON.parse(localStorage.getItem("userDetails"));
-		 }
-
-		 console.log(userDetails);
-		 userDetails.forEach(current => {
+		if (localStorage.getItem("userDetails") === null) {
+		userDetails = [];
+		} else {
+		userDetails = JSON.parse(localStorage.getItem("userDetails"));
+		}
+		userDetails.forEach(current => {
 		 	if ((username.value === current["username"]) && (password.value === current["password"])) {
 		 		let currentUser = [current["name"], current["email"]];
 
@@ -82,6 +80,6 @@ function verifyUser() {
 		 		displayToast("Please recheck your login credentials.");
 		 		displayToast("Or try Sign Up");
 		 	}
-		 });
+		});
 	}
 }
