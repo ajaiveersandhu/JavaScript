@@ -8,14 +8,19 @@ body {
 	max-width: 90vw;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .left-panel {
 	display: grid;
+	grid-column: 1 / 2;
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 10px;
 	padding-left: 10%;
+}
+
+.right-panel {
+	grid-column: 2 / 4;
 }
 
 .text {
@@ -25,6 +30,7 @@ body {
 .text .heading {
 	font-family: "Futura";
 	font-size: calc(4vh + 2vw);
+	width: 90%;
 }
 
 .text p {

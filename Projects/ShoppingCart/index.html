@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Christmas Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+        <script>
+            window.onload = changeImg;
+            var i = 0; // Start Point
+            var images = []; // Images Array
+            var time = 2500; // Time Between Switch
+
+            // Image Array List for image gallery
+            images[0] = "Images/slider1.jpg";
+            images[1] = "Images/slider2.jpg";
+            images[2] = "Images/slider3.jpg";
+            images[3] = "Images/slider4.jpg";
+            images[4] = "Images/slider5.jpg";
+            images[5] = "Images/slider6.jpg";
+
+            // Change Image
+            function changeImg() {
+                document.slide.src = images[i];
+                // Check If Index Is Under Max
+                if (i < images.length - 1) {
+                    // Add 1 to Index
+                    i++;
+                } else {
+                    // Reset Back To O
+                    i = 0;
+                }
+                // Run function every x seconds
+                setTimeout("changeImg()", time);
+            }
+        </script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <h1 class="store-name store-name-large">Christmas Store</h1>
+            <button type="button" class="btn btn-header btn-play"><span class="play">&#9658;</span></button>
+        </header>
+        <section class="content-section container">
+            <div class="img-slider">
+                <img name="slide" class="img-gallery" />
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="store-name">Christmas Store</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.spotify.com" target="_blank">
+                            <img src="Images/Spotify Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
